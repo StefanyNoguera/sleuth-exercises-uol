@@ -130,7 +130,7 @@ function draw()
     antitoxin -= 0.05;
   }
 
-  if (warfirin > 0.44) {
+  if (warfarin > 0.44) {
     antitoxin += 0.05;
   }
 
