@@ -132,11 +132,15 @@ function draw()
   }
 
   if (sarin > 0.28 && warfarin > 0.56) {
-    antivenom += 0.04
+    antivenom += 0.04;
   }
 
   if (AmanitaMushrooms > 0.47) {
-    antitoxin -= 0.05
+    antitoxin -= 0.05;
+  }
+
+  if (warfirn > 0.44) {
+    antitoxin += 0.05;
   }
 
 
