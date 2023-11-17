@@ -115,6 +115,10 @@ function draw()
     protamine -= 0.01;
   }
 
+  if (sarin < 0.4) {
+    protamine += 0.03;
+  }
+
 
 
 
