@@ -107,8 +107,7 @@ function draw()
 	- If AmanitaMushrooms dips below 0.29 or warfarin dips below 0.69, decrease HydrochloricAcid by 0.02
 	- When methanol goes above 0.25 or sarin dips below 0.34, increase HydrochloricAcid by 0.01
 	- When AmanitaMushrooms dips below 0.71 or methanol dips below 0.67, decrement antivenom by 0.05
-
-	- When sarin goes above 0.28 and warfarin goes above 0.56, increase antivenom by 0.04
+  - When sarin goes above 0.28 and warfarin goes above 0.56, increase antivenom by 0.04
 	- When AmanitaMushrooms goes above 0.47, reduce antitoxin by 0.05
 	- When warfarin goes above 0.44, try increasing antitoxin by 0.05*/
 
@@ -134,6 +133,10 @@ function draw()
 
   if (sarin > 0.28 && warfarin > 0.56) {
     antivenom += 0.04
+  }
+
+  if (AmanitaMushrooms > 0.47) {
+    antitoxin -= 0.05
   }
 
 
