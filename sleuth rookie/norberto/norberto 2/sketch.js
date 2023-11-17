@@ -111,7 +111,7 @@ function draw()
 	- When AmanitaMushrooms goes above 0.47, reduce antitoxin by 0.05
 	- When warfarin goes above 0.44, try increasing antitoxin by 0.05*/
 
-  if (methanos > 0.36) {
+  if (methanol > 0.36) {
     protamine -= 0.01;
   }
 
