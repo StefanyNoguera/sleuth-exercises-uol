@@ -119,6 +119,10 @@ function draw()
     protamine += 0.03;
   }
 
+  if (AmanitaMushrooms < 0.29 || warfarin < 0.69) {
+    HydrochloricAcid -= 0.02
+  }
+
 
 
 
