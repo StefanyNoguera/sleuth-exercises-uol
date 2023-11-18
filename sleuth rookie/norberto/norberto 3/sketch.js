@@ -134,7 +134,9 @@ function draw()
     antivenom += 0.03;
   }
 	// - If either sarin dips below 0.54, formaldehyde goes above 0.25, or perhaps methanol dips below 0.32, try decreasing sulphates by 0.02
-	// - If insecticide dips below 0.47 and arsenic goes above 0.51, increase sulphates by 0.05
+  if (sarin < 0.54 || formaldehyde > 0.25 || methanol < 0.32) {
+    sulphates -= 0.02;
+  }
 
 
 
