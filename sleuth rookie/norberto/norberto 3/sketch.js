@@ -137,7 +137,10 @@ function draw()
   if (sarin < 0.54 || formaldehyde > 0.25 || methanol < 0.32) {
     sulphates -= 0.02;
   }
-
+	// - If insecticide dips below 0.47 and arsenic goes above 0.51, increase sulphates by 0.05
+  if (insecticide < 0.47 && arsenic > 0.51) {
+    sulphates += 0.05;
+  }
 
 
 	//////////////////////////////////////////////////////
