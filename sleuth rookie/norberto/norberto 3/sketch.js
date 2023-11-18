@@ -113,6 +113,10 @@ function draw()
     ethanol -= 0.01
   }
 
+	// - When strychnine dips below 0.36 or sarin dips below 0.58, increase ethanol by 0.02
+  if (strychnine < 0.36 || sarin< 0.58) {
+    ethanol += 0.02
+  }
 	// - When formaldehyde goes above 0.73 and sarin dips below 0.72, increase calcium_gluconate by 0.04
 	// - When methanol goes above 0.69, or on the other hand, insecticide goes above 0.65 and sarin goes above 0.7, try decreasing antivenom by 0.03
 	// - When arsenic goes above 0.62 and strychnine dips below 0.71, try increasing antivenom by 0.03
