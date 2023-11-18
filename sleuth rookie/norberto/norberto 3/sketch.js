@@ -126,6 +126,9 @@ function draw()
     calcium_gluconate += 0.04;
   }
 	// - When methanol goes above 0.69, or on the other hand, insecticide goes above 0.65 and sarin goes above 0.7, try decreasing antivenom by 0.03
+  if (methanol > 0.69 || insecticide > 0.65 && sarin > 0.7) {
+    antivenom -= 0.03;
+  }
 	// - When arsenic goes above 0.62 and strychnine dips below 0.71, try increasing antivenom by 0.03
 	// - If either sarin dips below 0.54, formaldehyde goes above 0.25, or perhaps methanol dips below 0.32, try decreasing sulphates by 0.02
 	// - If insecticide dips below 0.47 and arsenic goes above 0.51, increase sulphates by 0.05
