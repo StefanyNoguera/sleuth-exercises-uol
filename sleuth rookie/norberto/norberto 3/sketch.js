@@ -108,7 +108,16 @@ function draw()
 
 	//Develop the antidote below
 	//Write conditional statements to change the amount of each substance ...
+  // - If insecticide dips below 0.74, or on the other hand, formaldehyde goes above 0.34 and arsenic dips below 0.41, decrease ethanol by 0.01
+  if (insecticide < 0.74 || formaldehyde > 0.34 && arsenic < 0.41) {
+    ethanol -= 0.01
+  }
 
+	// - When formaldehyde goes above 0.73 and sarin dips below 0.72, increase calcium_gluconate by 0.04
+	// - When methanol goes above 0.69, or on the other hand, insecticide goes above 0.65 and sarin goes above 0.7, try decreasing antivenom by 0.03
+	// - When arsenic goes above 0.62 and strychnine dips below 0.71, try increasing antivenom by 0.03
+	// - If either sarin dips below 0.54, formaldehyde goes above 0.25, or perhaps methanol dips below 0.32, try decreasing sulphates by 0.02
+	// - If insecticide dips below 0.47 and arsenic goes above 0.51, increase sulphates by 0.05
 
 
 
