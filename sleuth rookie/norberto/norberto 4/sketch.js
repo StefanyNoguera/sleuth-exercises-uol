@@ -126,6 +126,9 @@ function draw()
     insulin -= 0.05;
   }
 	//- When sarin goes above 0.36 and SnakeVenom goes above 0.54, or on the other hand, mercury dips below 0.33 or chlorine dips below 0.41, increment insulin by 0.04
+  if (sarin > 0.36 && SnakeVenom > 0.54 || mercury < 0.33 || chlorine < 0.41) {
+    insulin += 0.04;
+  }
 	//- If insecticide goes above 0.65 or strychnine dips below 0.65, whilst at the same time, spiderVenom goes above 0.67 or mercury dips below 0.67, decrement sulphates by 0.04
 	//- When chlorine goes above 0.42 and sarin goes above 0.3, whilst at the same time, SnakeVenom dips below 0.68 or methanol dips below 0.29, raise sulphates by 0.02
 	//- If strychnine goes above 0.75 and SnakeVenom dips below 0.71, whilst at the same time, spiderVenom goes above 0.61 or chlorine goes above 0.75, decrement antibodies by 0.02
