@@ -134,6 +134,9 @@ function draw()
     sulphates -= 0.04;
   }
 	//- When chlorine goes above 0.42 and sarin goes above 0.3, whilst at the same time, SnakeVenom dips below 0.68 or methanol dips below 0.29, raise sulphates by 0.02
+  if (chlorine > 0.42 && sarin > 0.3 || SnakeVenom < 0.68 || methanol < 0.29) {
+    sulphates += 0.02;
+  }
 	//- If strychnine goes above 0.75 and SnakeVenom dips below 0.71, whilst at the same time, spiderVenom goes above 0.61 or chlorine goes above 0.75, decrement antibodies by 0.02
 	//- If mercury dips below 0.75 and methanol dips below 0.69, whilst at the same time, insecticide goes above 0.55 or sarin goes above 0.68, increment antibodies by 0.02
 	//- If insecticide dips below 0.61, whilst at the same time, SnakeVenom dips below 0.41 or spiderVenom dips below 0.38, try decreasing plasma by 0.05
