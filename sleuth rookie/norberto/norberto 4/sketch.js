@@ -122,6 +122,9 @@ function draw()
 	//Write conditional statements to change the amount of each substance ...
 
   //- When either strychnine goes above 0.68, insecticide goes above 0.51, methanol dips below 0.64, or perhaps spiderVenom dips below 0.26, decrease insulin by 0.05
+  if (strychnine > 0.68 || insecticide > 0.51 || methanol < 0.64 || spiderVenom < 0.26) {
+    insulin -= 0.05;
+  }
 	//- When sarin goes above 0.36 and SnakeVenom goes above 0.54, or on the other hand, mercury dips below 0.33 or chlorine dips below 0.41, increment insulin by 0.04
 	//- If insecticide goes above 0.65 or strychnine dips below 0.65, whilst at the same time, spiderVenom goes above 0.67 or mercury dips below 0.67, decrement sulphates by 0.04
 	//- When chlorine goes above 0.42 and sarin goes above 0.3, whilst at the same time, SnakeVenom dips below 0.68 or methanol dips below 0.29, raise sulphates by 0.02
