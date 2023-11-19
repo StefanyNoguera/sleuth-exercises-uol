@@ -154,6 +154,9 @@ function draw()
     plasma += 0.01;
   }
 	//- When either chlorine goes above 0.63, strychnine dips below 0.62, or perhaps methanol goes above 0.27, decrease sodiumBicarbonate by 0.05
+  if (chlorine > 0.63 || strychnine < 0.62 || methanol > 0.27) {
+    sodiumBicarbonate -= 0.05;
+  }
 	//- If either sarin goes above 0.44, mercury dips below 0.35, or perhaps insecticide goes above 0.74, increase sodiumBicarbonate by 0.04
 
 
