@@ -158,8 +158,9 @@ function draw()
     sodiumBicarbonate -= 0.05;
   }
 	//- If either sarin goes above 0.44, mercury dips below 0.35, or perhaps insecticide goes above 0.74, increase sodiumBicarbonate by 0.04
-
-
+  if (sarin > 0.44 || mercury < 0.35 || insecticide > 0.74) {
+    sodiumBicarbonate += 0.04;
+  }
 
 	//////////////////////////////////////////////////////
 
