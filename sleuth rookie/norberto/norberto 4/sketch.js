@@ -142,6 +142,9 @@ function draw()
     antibodies -= 0.02;
   }
 	//- If mercury dips below 0.75 and methanol dips below 0.69, whilst at the same time, insecticide goes above 0.55 or sarin goes above 0.68, increment antibodies by 0.02
+  if (mercury < 0.75 && methanol < 0.69 || insecticide > 0.55 || sarin > 0.68) {
+    antibodies += 0.02;
+  }
 	//- If insecticide dips below 0.61, whilst at the same time, SnakeVenom dips below 0.41 or spiderVenom dips below 0.38, try decreasing plasma by 0.05
 	//- If sarin dips below 0.63, or on the other hand, mercury dips below 0.5 and methanol goes above 0.66, increment plasma by 0.01
 	//- When either chlorine goes above 0.63, strychnine dips below 0.62, or perhaps methanol goes above 0.27, decrease sodiumBicarbonate by 0.05
