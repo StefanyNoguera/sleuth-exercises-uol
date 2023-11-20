@@ -77,7 +77,7 @@ function draw()
 
   if (currentRoad == "Reynolds Street")
   {
-    direction = "west";
+    direction = "east";
   }
 
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
