@@ -70,6 +70,11 @@ function draw()
     direction = "west";
   }
 
+  if (currentRoad == "Meyers Way")
+  {
+    direction = "south";
+  }
+
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
 
 	background(50);
