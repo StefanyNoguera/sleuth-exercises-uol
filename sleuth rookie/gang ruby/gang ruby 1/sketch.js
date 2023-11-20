@@ -8,8 +8,8 @@ CaseNum: 402-0-29559123-4098078
 The criminal gang going by the name ‘Why’ has raided the Gates Jewel Repository and gotten away with a sizeable stash of Rubies. The Console City police gave chase but the gang scattered across the city, and so it’s up to us to apprehend them. The first of the gang to catch is Matz. He’s a fast runner but he’s weighed down by Rubies. Your speedy legs should be up to the job.
 
 - In the draw function write if statements which use the road you are currently on to set your direction.
-- The currentRoad variable stores the road that you are currently on. 
-- Valid directions are "north", "east", "south" and "west". 
+- The currentRoad variable stores the road that you are currently on.
+- Valid directions are "north", "east", "south" and "west".
 
 I've written the first if statement to get you started but the rest is up to you kid!
 
@@ -60,6 +60,10 @@ function draw()
 		direction = "east";
 	}
 
+  if (currentRoad == "Dijkstra Street")
+  {
+    direction = "south";
+  }
 
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
 
