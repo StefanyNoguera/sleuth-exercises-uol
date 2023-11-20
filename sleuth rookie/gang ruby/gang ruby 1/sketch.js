@@ -65,6 +65,11 @@ function draw()
     direction = "south";
   }
 
+  if (currentRoad == "Turing Place")
+  {
+    direction = "west";
+  }
+
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
 
 	background(50);
