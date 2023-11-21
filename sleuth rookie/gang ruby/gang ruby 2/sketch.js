@@ -73,7 +73,7 @@ function draw()
   else if (currentRoad == "Ada Avenue")
   {
     det.speedX = 0;
-    det.speedY = 1;
+    det.speedY = -1;
   }
 
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
