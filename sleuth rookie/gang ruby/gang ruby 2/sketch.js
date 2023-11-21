@@ -82,6 +82,12 @@ function draw()
     det.speedY = 0;
   }
 
+  else if (currentRoad == "Gates Avenue")
+  {
+    det.speedX = 0;
+    det.speedY = -1;
+  }
+
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
 	background(50);
 
