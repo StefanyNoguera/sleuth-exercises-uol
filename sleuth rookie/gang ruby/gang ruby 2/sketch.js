@@ -88,6 +88,12 @@ function draw()
     det.speedY = -1;
   }
 
+  else if (currentRoad == "Adele Street")
+  {
+    det.speedX = -1;
+    det.speedY = 0;
+  }
+
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
 	background(50);
 
