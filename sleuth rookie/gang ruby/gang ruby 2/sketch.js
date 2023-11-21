@@ -5,13 +5,13 @@ Stage 2 - Katz
 Officer: 4098078
 CaseNum: 402-1-29182574-4098078
 
-There are still three more Why gang members to catch. The gang member Katz was seen heading in this direction. If you’re quick enough you might just catch her. 
+There are still three more Why gang members to catch. The gang member Katz was seen heading in this direction. If you’re quick enough you might just catch her.
 
 - In the draw function write if statements which use the road you are currently on to set your direction.
-- The currentRoad variable stores the road that you are currently on. 
-- Set the direction using the properties of the detective object, speedX and speedY. 
+- The currentRoad variable stores the road that you are currently on.
+- Set the direction using the properties of the detective object, speedX and speedY.
 	- For example, to go north you would write the following code:
-		det.speedX = 0; 
+		det.speedX = 0;
 		det.speedY = -1;
 
 I'll point you in the right direction to get started but the rest is up to you kid!
@@ -63,6 +63,12 @@ function draw()
 		det.speedX = 0;
 		det.speedY = 1;
 	}
+
+  else if (currentRoad == "Gosling Road")
+  {
+    det.speedX = 1;
+    det.speedY = 0;
+  }
 
 
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
