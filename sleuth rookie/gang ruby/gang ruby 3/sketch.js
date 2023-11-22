@@ -10,9 +10,9 @@ member Bos is hiding in the city narrows. Bos is slow, but the streets are
 unmarked. You’ll have to use your best cunning to find him.
 
 - Write if statements in the draw loop to set the direction for the detective
-- Do this using the properties of the detective object, speedX and speedY. 
+- Do this using the properties of the detective object, speedX and speedY.
 	- For example, to go north you would write the following code:
-		det.speedX = 0; 
+		det.speedX = 0;
 		det.speedY = -1;
 
 - There are many ways to complete this task but you should only use the following commands and operators:
@@ -65,6 +65,11 @@ function draw()
 		det.speedY = 0;
 	}
 
+  else if  (det.locationX < 700)
+    {
+      det.speedX = 0;
+      det.speedY = -1;
+    }
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
 
 	background(50);
