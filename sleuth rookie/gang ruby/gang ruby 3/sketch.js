@@ -78,7 +78,11 @@ function draw()
 		det.speedY = 0;
   }
 
-
+  if (det.locationX < 450)
+  {
+    det.speedX = 0;
+    det.speedY = -1;
+  }
 
 
 
