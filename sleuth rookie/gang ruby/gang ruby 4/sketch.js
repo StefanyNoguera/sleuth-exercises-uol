@@ -1,31 +1,28 @@
 /*
 402 - The case of the Why Gang ruby heist
-Stage 3 - Bos
+Stage 4 - Fox
 
 Officer: 4098078
-CaseNum: 402-2-91968212-4098078
+CaseNum: 402-3-28122729-4098078
 
-Two Why gang members remain on the loose. Our sources tell us that the gang
-member Bos is hiding in the city narrows. Bos is slow, but the streets are
-unmarked. You’ll have to use your best cunning to find him.
+This final Why gang member Fox is the boss of the gang. Fox is particularly cunning and has hidden herself down this twisted network of alleys known as vice city. Head into vice city to find her but don’t get lost!
 
 - Write if statements in the draw loop to set the direction for the detective
-- Do this using the properties of the detective object, speedX and speedY.
+- Do this using the properties of the detective object, speedX and speedY. 
 	- For example, to go north you would write the following code:
-		det.speedX = 0;
+		det.speedX = 0; 
 		det.speedY = -1;
 
 - There are many ways to complete this task but you should only use the following commands and operators:
-
 	if(){}
 	else if
 	>
 	<
+	&&
 
-- You will need to make careful use of `else if` for this task. Join all conditionals with "else if"
+- You will need to make careful use of `else if` and the && operator for this task. Join all conditionals with "else if" and use at least one && operator for each condition.
 
 */
-
 
 var currentRoad;
 var direction;
@@ -36,8 +33,8 @@ var overlayImage;
 var det = {
 	speedX: 0,
 	speedY: 0,
-	locationX: 952,
-	locationY: 634,
+	locationX: 763,
+	locationY: 696,
 	currentStreet: undefined,
 	image: './det.png'
 };
@@ -59,52 +56,22 @@ function draw()
 {
 
 	///////////////////ADD YOUR CODE HERE///////////////////
-	if (det.locationX > 700 || det.locationY < 445 )
+	if (det.locationY > 509 && det.locationX > 751)
 	{
-		det.speedX = -1;
-		det.speedY = 0;
+		det.speedX = 0;
+		det.speedY = -1;
 	}
 
-  else if (det.locationX < 700)
-  {
-    det.speedX = 0;
-    det.speedY = -1;
-  }
 
-  if (det.locationX < 445)
-  {
-    det.speedX = 0;
-    det.speedY = -1;
-  }
-
-  if (det.locationY < 260)
-  {
-    det.speedX = -1;
-    det.speedY = 0;
-  }
-
-  if (det.locationX < 195)
-  {
-    det.speedX = 0;
-    det.speedY = -1;
-  }
-
-  if (det. locationY < 135)
-  {
-    det.speedX = -1;
-    det.speedY = 0;
-  }
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
 
 	background(50);
-
 
 	if (perp.caught === 0)
 	{
 		det.locationX += det.speedX;
 		det.locationY += det.speedY;
 	}
-
 
 	//draw the images of the map perp and the detective
 	image(mapImage, 0, 0);
@@ -146,7 +113,6 @@ function draw()
 
 	fill(255);
 	text(`${mouseX},${mouseY}`, mouseX, mouseY);
-
 }
 
 function hud()
@@ -174,8 +140,8 @@ var roadWidth = 25;
 var bckgrndColour = 50;
 var perp = {
 	caught: 0,
-	name: 'Bos',
+	name: 'Fox',
 	image: './perp.png',
-	locationX: 73,
-	locationY: 135
+	locationX: 136,
+	locationY: 10
 };
