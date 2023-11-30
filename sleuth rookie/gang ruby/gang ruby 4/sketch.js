@@ -8,9 +8,9 @@ CaseNum: 402-3-28122729-4098078
 This final Why gang member Fox is the boss of the gang. Fox is particularly cunning and has hidden herself down this twisted network of alleys known as vice city. Head into vice city to find her but don’t get lost!
 
 - Write if statements in the draw loop to set the direction for the detective
-- Do this using the properties of the detective object, speedX and speedY. 
+- Do this using the properties of the detective object, speedX and speedY.
 	- For example, to go north you would write the following code:
-		det.speedX = 0; 
+		det.speedX = 0;
 		det.speedY = -1;
 
 - There are many ways to complete this task but you should only use the following commands and operators:
@@ -56,13 +56,17 @@ function draw()
 {
 
 	///////////////////ADD YOUR CODE HERE///////////////////
-	if (det.locationY > 509 && det.locationX > 751)
+	if (det.locationY > 509 || det.locationX < 205)
 	{
 		det.speedX = 0;
 		det.speedY = -1;
 	}
 
-
+  else if (det.locationY < 509)
+  {
+    det.speedX = -1;
+    det.speedY = 0;
+  }
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
 
 	background(50);
