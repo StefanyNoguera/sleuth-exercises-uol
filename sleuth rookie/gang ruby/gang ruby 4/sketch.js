@@ -54,12 +54,6 @@ function setup()
 
 function draw()
 {
-
-  /////////////////////
-
-
-
-  
 	///////////////////ADD YOUR CODE HERE///////////////////
 
   if ((det.locationY == 696 && det.locationX == 763) || (det.locationX < 205 && det.locationY > 394) ||
@@ -77,7 +71,7 @@ function draw()
     det.speedX = -1;
     det.speedY = 0;
     console.log("west");
-  }//   835 58
+  }
 
   else if ((det.locationY == 388 && det.locationX > 190) || (det.locationX == 314 && det.locationY == 123))
   {
