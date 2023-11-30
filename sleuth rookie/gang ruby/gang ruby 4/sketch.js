@@ -55,33 +55,40 @@ function setup()
 function draw()
 {
 
+  // if (det.locationX == 314 && det.locationY < 123)
+  // {
+  //   835 58
+  // }
 	///////////////////ADD YOUR CODE HERE///////////////////
-  if ((det.locationY < 509 && det.locationX > 756) || (det.locationX < 579 && det.locationY < 260))
+    // 122 62
+  if (
+  (det.locationY == 696 && det.locationX == 763) || (det.locationX < 205 && det.locationY > 394) ||
+  (det.locationX > 577 && det.locationY == 388) || (det.locationX < 315 && det.locationY == 260) ||
+  (det.locationX == 835 && det.locationY == 123) || (det.locationX == 125 && det.locationY == 62))
+  {
+    det.speedX = 0;
+    det.speedY = -1;
+    console.log("north");
+  }
+
+  else if ((det.locationY == 509 && det.locationX > 756) || (det.locationX == 578 && det.locationY == 260) || (det.locationX == 835 && det.locationY == 62))
   {
     det.speedX = -1;
     det.speedY = 0;
     console.log("west");
-  }
+  }//   835 58
 
-  else if ((det.locationY > 509 && det.locationX > 756) || (det.locationX < 205 && det.locationY > 394) || (det.locationX > 577 && det.locationY < 390))
-	{
-    det.speedX = 0;
-		det.speedY = -1;
-    console.log("north");
-	}
-
-  else if (det.locationY < 390 && det.locationX > 190)
+  else if ((det.locationY == 388 && det.locationX > 190) || (det.locationX == 314 && det.locationY == 123))
   {
     det.speedX = 1;
     det.speedY = 0;
     console.log("east");
   }
 
-  // if (det.locationX < 579 && det.locationY < 260)
-  // {
-  //   det.speedX = -1;
-  //   det.speedY = 0;
-  // }
+
+
+
+  // || (det.locationX < 315 && det.locationY == 259)
 
 
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
