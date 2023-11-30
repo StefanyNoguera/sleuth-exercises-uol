@@ -56,23 +56,32 @@ function draw()
 {
 
 	///////////////////ADD YOUR CODE HERE///////////////////
-  if ((det.locationY > 509 && det.locationX > 756) || (det.locationX < 205 && det.locationY > 394) || (det.locationX > 577 && det.locationY < 390))
-	{
-    det.speedX = 0;
-		det.speedY = -1;
-	}
-
-  else if ((det.locationY < 509 && det.locationX > 756))
+  if ((det.locationY < 509 && det.locationX > 756) || (det.locationX < 579 && det.locationY < 260))
   {
     det.speedX = -1;
     det.speedY = 0;
+    console.log("west");
   }
+
+  else if ((det.locationY > 509 && det.locationX > 756) || (det.locationX < 205 && det.locationY > 394) || (det.locationX > 577 && det.locationY < 390))
+	{
+    det.speedX = 0;
+		det.speedY = -1;
+    console.log("north");
+	}
 
   else if (det.locationY < 390 && det.locationX > 190)
   {
     det.speedX = 1;
     det.speedY = 0;
+    console.log("east");
   }
+
+  // if (det.locationX < 579 && det.locationY < 260)
+  // {
+  //   det.speedX = -1;
+  //   det.speedY = 0;
+  // }
 
 
 	///////////////DO NOT CHANGE CODE BELOW THIS POINT///////////////////
