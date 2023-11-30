@@ -56,19 +56,19 @@ function draw()
 {
 
 	///////////////////ADD YOUR CODE HERE///////////////////
-	if (det.locationY > 509 || det.locationX < 205)
+  if ((det.locationY > 509 && det.locationX > 756) || (det.locationX < 205 && det.locationY > 394) || (det.locationX > 577 && det.locationY < 390))
 	{
-		det.speedX = 0;
+    det.speedX = 0;
 		det.speedY = -1;
 	}
 
-  else if (det.locationY < 509)
+  else if ((det.locationY < 509 && det.locationX > 756))
   {
     det.speedX = -1;
     det.speedY = 0;
   }
 
-  if (det.locationY < 390)
+  else if (det.locationY < 390 && det.locationX > 190)
   {
     det.speedX = 1;
     det.speedY = 0;
