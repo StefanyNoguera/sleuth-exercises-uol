@@ -52,6 +52,20 @@ function draw()
     image(img,0,0);
 
     //Write your code below here ...
+    distToBurrito = dist(mouseX, mouseY, 687, 274);
+
+    if (distToBurrito < 71) {
+      fill(255,127,80);
+      ellipse(687, 274, 142);
+    }
+    else if (mouseX > 1600 && mouseX < 1720 && mouseY > 239 && mouseY < 295){
+      fill(218,112,214);
+      rect(1600,239,119,56);
+    }
+    else {
+      fill(147,112,219);
+      rect(500,54,1075,514);
+    }
 
     // finally, draw Shiffman's position
     strokeWeight(2);
@@ -61,8 +75,7 @@ function draw()
 
 
     // a helpful mouse coordinate pointer
-    fill(255);
+    fill(255, 0, 255);
     noStroke();
     text(`${mouseX},${mouseY}`,mouseX, mouseY);
-}
 }
