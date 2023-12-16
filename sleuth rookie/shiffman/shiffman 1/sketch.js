@@ -48,13 +48,11 @@ function draw()
     image(img,0,0);
 
     //Write your code below here ...
-    if (mouseY < 222)
+    if (mouseY > 245)
     {
-        fill(255,255,0);
-        rect(0,222,width,1000);
+      fill(255, 255, 0);
+      rect(0, 245, img.width, height - 245);
     }
-
-
 
     // finally, draw Shiffman's position
     strokeWeight(2);
