@@ -52,6 +52,11 @@ function draw()
     var speakeasyY = 673;
     var distance = dist(shiffmanX, shiffmanY, speakeasyX, speakeasyY);
 
+    if (distance < 71) {
+      fill(178,34,34);
+      ellipse(speakeasyX, speakeasyY, 142, 142);
+    }
+
     // finally, draw Shiffman's position
     strokeWeight(2);
     stroke(255);
