@@ -5,11 +5,11 @@ CaseNum: 403-0-29014137-4098078
 
 Case 403 - Surveillance - stage 1
 
-We are on the lookout for the criminal mastermind known as Shiffman. 
+We are on the lookout for the criminal mastermind known as Shiffman.
 
-- Our sources tell us that he is currently heading south on Meyers Way. 
+- Our sources tell us that he is currently heading south on Meyers Way.
 - I need you to sound the alarm if he crosses Ada Avenue.
-- Shiffman's position is signified by the mouse. 
+- Shiffman's position is signified by the mouse.
 - To sound the alarm, draw a Yellow rectangle covering the remainder of the map from Ada Avenue to the south.
 
 NB. all road coordinates are measured from their central axis.
@@ -48,6 +48,11 @@ function draw()
     image(img,0,0);
 
     //Write your code below here ...
+    if (mouseY < 222)
+    {
+        fill(255,255,0);
+        rect(0,222,width,1000);
+    }
 
 
 
