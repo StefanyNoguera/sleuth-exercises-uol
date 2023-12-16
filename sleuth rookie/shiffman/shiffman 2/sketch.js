@@ -46,8 +46,11 @@ function draw()
     image(img,0,0);
 
     //Write your code below here ...
-
-
+    var shiffmanX = mouseX;
+    var shiffmanY = mouseY;
+    var speakeasyX = 2479;
+    var speakeasyY = 673;
+    var distance = dist(shiffmanX, shiffmanY, speakeasyX, speakeasyY);
 
     // finally, draw Shiffman's position
     strokeWeight(2);
