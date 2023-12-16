@@ -44,7 +44,10 @@ function draw()
     image(img,0,0);
 
     //Write your code below here ...
-
+    if (mouseX > 650 && mouseX < 832 && mouseY > 177 && mouseY < 300){
+        fill(218,112,214);
+        rect(650,177,182,123);
+    }
 
     // finally, draw Shiffman's position
     strokeWeight(2);
@@ -56,5 +59,4 @@ function draw()
     fill(255);
     noStroke();
     text(`${mouseX},${mouseY}`,mouseX, mouseY);
-}
 }
