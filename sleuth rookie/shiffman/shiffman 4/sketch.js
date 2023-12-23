@@ -59,7 +59,7 @@ function draw()
       ellipse(687, 274, 142);
     }
     else if (mouseX > 1600 && mouseX < 1720 && mouseY > 239 && mouseY < 295){
-      fill(218,112,214);
+      fill(100,149,237);
       rect(1600,239,119,56);
     }
     else {
