@@ -42,6 +42,6 @@ function draw() {
     }
 
     for (var i = 0; i < 7; i++) {
-        image(soldierImage, 796 + i * 39, 693 - i * 12);
+        image(soldierImage, 796 + i * 28, 693 - i * 33);
     }
 }
