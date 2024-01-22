@@ -38,7 +38,7 @@ function setup() {
 function draw() {
     // add your for loop below
     for (var i = 0; i < 19; i++) {
-        image(soldierImage, 500 + i * 38, 500 + i * 10);
+        image(soldierImage, 500 + i * 39, 490 + i * 12);
     }
 
 }
