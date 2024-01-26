@@ -42,9 +42,9 @@ function draw() {
     for (var i = 0; i < 8; i++) {
         for (var j = 0; j < 5; j++) {
           if (j % 2 == 0) {
-            image(chessPieceImage, 690 + i * 73, 361 + j * 60);
+            image(chessPieceImage, 690 + i * 73, 361 + j * 59);
           } else {
-            // image(chessPieceImage, 620 + i * 10, 100 + j * 100);
+            image(chessPieceImage, 620 + i * 73, 361 + j * 59);
           }
       }
   }
