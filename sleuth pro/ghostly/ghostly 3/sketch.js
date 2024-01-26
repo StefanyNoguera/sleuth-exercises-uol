@@ -37,5 +37,9 @@ function setup() {
 
 function draw() {
     // add your for loop below
-
+    for (var i = 0; i < 8; i++) {
+        for (var j = 0; j < 4; j++) {
+            image(diceImage, 430 + 74 * i, 320 + 60 * j);
+        }
+    }
 }
