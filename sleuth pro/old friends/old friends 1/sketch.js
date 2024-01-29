@@ -33,7 +33,7 @@ function setup()
   createCanvas(1280,800);
 
   // replace all redacted words with the correct values from the data structures above
-  redactedText = "Dear " + Document_B[1] + ", I am writing to you with much confusion and distress. As you know my company " + Document_A[2] + " has been a bastion of the community. Over the years we have provided many jobs for the people of Console City. We’ve kept the city in a good " + Document_B[0] + ". We even paid some tax once. Now I find that our efforts to open a new plant opposite the " + Document_B[2] + " is being blocked by your very own " + Document_A[1] + ". Did I not help you " +  + " the mess after " +  + " ? Did I not keep quiet about your " +  + " with " +  + "? Contact me discreetly and with haste. Some arrangement must be found. Your old friend, " +  + ".";
+  redactedText = "Dear " + Document_B[1] + ", I am writing to you with much confusion and distress. As you know my company " + Document_A[2] + " has been a bastion of the community. Over the years we have provided many jobs for the people of Console City. We’ve kept the city in a good " + Document_B[0] + ". We even paid some tax once. Now I find that our efforts to open a new plant opposite the " + Document_B[2] + " is being blocked by your very own " + Document_A[1] + ". Did I not help you " + Document_B[4] + " the mess after " +  + " ? Did I not keep quiet about your " +  + " with " +  + "? Contact me discreetly and with haste. Some arrangement must be found. Your old friend, " +  + ".";
 
 }
 
