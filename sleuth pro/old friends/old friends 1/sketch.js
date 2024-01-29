@@ -5,10 +5,10 @@ CaseNum: 502-0-68327277-4098078
 
 Case 502 - Old friends - stage 1
 
-Corruption is everywhere in Console City, and the cops are no exception. I’ve managed to lay my hands on some government censored documents, and I think they lead to a trail of corruption that goes all the way to the top. However, the key parts have been redacted. Luckily a source of mine has sent me redacted words in the very order that they appear in the document. 
+Corruption is everywhere in Console City, and the cops are no exception. I’ve managed to lay my hands on some government censored documents, and I think they lead to a trail of corruption that goes all the way to the top. However, the key parts have been redacted. Luckily a source of mine has sent me redacted words in the very order that they appear in the document.
 
 - Run the sketch and you'll see the redacted text on the left and the missing words on the right
-- Your task is to replace the redacted sections in redactedText with the missing words. 
+- Your task is to replace the redacted sections in redactedText with the missing words.
 - You must do this by finding each word in the data structures  below and then concatenating redactedText with references to the word in the respective data structure.
 
 */
@@ -33,7 +33,7 @@ function setup()
   createCanvas(1280,800);
 
   // replace all redacted words with the correct values from the data structures above
-  redactedText = "Dear +++++++++++++++++++, I am writing to you with much confusion and distress. As you know my company ++++++++++++++++++++++ has been a bastion of the community. Over the years we have provided many jobs for the people of Console City. We’ve kept the city in a good +++++++++++++++. We even paid some tax once. Now I find that our efforts to open a new plant opposite the +++++++++++++ is being blocked by your very own ++++++++++++. Did I not help you ++++++++ the mess after ++++++++ ? Did I not keep quiet about your ++++++ with ++++++++? Contact me discreetly and with haste. Some arrangement must be found. Your old friend, ++++++";
+  redactedText = "Dear " +  + ", I am writing to you with much confusion and distress. As you know my company " +  + " has been a bastion of the community. Over the years we have provided many jobs for the people of Console City. We’ve kept the city in a good " +  + ". We even paid some tax once. Now I find that our efforts to open a new plant opposite the " +  + " is being blocked by your very own " +  + ". Did I not help you " +  + " the mess after " +  + " ? Did I not keep quiet about your " +  + " with " +  + "? Contact me discreetly and with haste. Some arrangement must be found. Your old friend, " +  + ".";
 
 }
 
