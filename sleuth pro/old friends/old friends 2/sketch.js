@@ -55,7 +55,7 @@ function setup()
   createCanvas(1280,800);
 
   // replace all redacted words with the correct values from the data structures above
-  redactedText = "My dearest " + BRecord[0].Part1 + ", Please don’t doubt my sincerity when I say that I hadn’t the faintest idea about " + ARecord[2].Part0 + " intervention. I suspect that " + BRecord[6].Part0 + " a " + ARecord[4].Part0 + " interest at the +++++. I and the +++++++++ appreciate your many contributions over the years. However, this is a most ++++++++ matter which would require significant +++++++ for me to deal with it satisfactorily. I would not be so crude as to suggest a sum but perhaps ++++++++++ to my forthcoming campaign would help. Yours sincerely, +++++++++++++++++++";
+  redactedText = "My dearest " + BRecord[0].Part1 + ", Please don’t doubt my sincerity when I say that I hadn’t the faintest idea about " + ARecord[2].Part0 + " intervention. I suspect that " + BRecord[6].Part0 + " a " + ARecord[4].Part0 + " interest at the " + ARecord[1].Part1 + ". I and the " + BRecord[1].Part0 + " appreciate your many contributions over the years. However, this is a most ++++++++ matter which would require significant +++++++ for me to deal with it satisfactorily. I would not be so crude as to suggest a sum but perhaps ++++++++++ to my forthcoming campaign would help. Yours sincerely, +++++++++++++++++++";
 
 }
 
