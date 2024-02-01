@@ -56,7 +56,7 @@ function setup()
   createCanvas(1280,800);
 
   // replace all redacted words with the correct values from the data structures above
-  redactedText = "Dear " + EvidenceA.Component3[0] + ", I am sure that something could be worked out in terms of " + EvidenceB.Component2[2] + " for your " + EvidenceA.Component6[0] + ". How does " + EvidenceA.Component8[1] + " sound ? I am afraid I will need to be so crude as to spell out what ALGOL requires in return. " + EvidenceB.Component7[0] + " needs to be out of the picture. She’s caused enough trouble. Get the " + EvidenceB.Component9[2] + " to organise the " + EvidenceB.Component0[2] + " but I’d prefer it you don’t mention me or +++++. I owe them enough favours already. Your old friend, ++++++";
+  redactedText = "Dear " + EvidenceA.Component3[0] + ", I am sure that something could be worked out in terms of " + EvidenceB.Component2[2] + " for your " + EvidenceA.Component6[0] + ". How does " + EvidenceA.Component8[1] + " sound ? I am afraid I will need to be so crude as to spell out what ALGOL requires in return. " + EvidenceB.Component7[0] + " needs to be out of the picture. She’s caused enough trouble. Get the " + EvidenceB.Component9[2] + " to organise the " + EvidenceB.Component0[2] + " but I’d prefer it you don’t mention me or " + EvidenceB.Component1[2] + ". I owe them enough favours already. Your old friend, " + EvidenceB.Component3[2] + ".";
 
 }
 
