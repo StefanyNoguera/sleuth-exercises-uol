@@ -9,7 +9,7 @@ Yet another document has come my way. This one is even more tricky to decipher.
 The Governor must really have something to hide.
 
 - Run the sketch and you'll see the redacted text on the left and the missing words on the right
-- Your task is to replace the redacted sections in redactedText with the missing words. 
+- Your task is to replace the redacted sections in redactedText with the missing words.
 - You must do this by finding each word in the data structures  below and then concatenating redactedText with references to the word in the respective data structure.
 
 */
@@ -18,28 +18,28 @@ var redactedText;
 
 // arrays to be referenced in redactedText
 var EvidenceA = {
-	Component0: [ "play", "sneeze", "bake"], 
-	Component1: [ "bake", "bake", "hurry"], 
-	Component2: [ "sail", "tug", "clip"], 
-	Component3: [ "Governor Zuckerberg", "fence", "play"], 
-	Component4: [ "sail", "meddle", "smile"], 
-	Component5: [ "bake", "radiate", "meddle"], 
-	Component6: [ "campaign", "plug", "bake"], 
-	Component7: [ "fence", "play", "mend"], 
-	Component8: [ "start", "$200,000", "clip"], 
+	Component0: [ "play", "sneeze", "bake"],
+	Component1: [ "bake", "bake", "hurry"],
+	Component2: [ "sail", "tug", "clip"],
+	Component3: [ "Governor Zuckerberg", "fence", "play"],
+	Component4: [ "sail", "meddle", "smile"],
+	Component5: [ "bake", "radiate", "meddle"],
+	Component6: [ "campaign", "plug", "bake"],
+	Component7: [ "fence", "play", "mend"],
+	Component8: [ "start", "$200,000", "clip"],
 	Component9: [ "radiate", "plug", "clip"]
 };
 
 var EvidenceB = {
-	Component0: [ "radiate", "meddle", "hit"], 
-	Component1: [ "meddle", "protect", "ALGOL"], 
-	Component2: [ "rejoice", "protect", "a donation"], 
-	Component3: [ "start", "tug", "Edsger"], 
-	Component4: [ "hurry", "clip", "fence"], 
-	Component5: [ "rejoice", "play", "stuff"], 
-	Component6: [ "sneeze", "start", "protect"], 
-	Component7: [ "Hopper", "succeed", "tug"], 
-	Component8: [ "tug", "fence", "stuff"], 
+	Component0: [ "radiate", "meddle", "hit"],
+	Component1: [ "meddle", "protect", "ALGOL"],
+	Component2: [ "rejoice", "protect", "a donation"],
+	Component3: [ "start", "tug", "Edsger"],
+	Component4: [ "hurry", "clip", "fence"],
+	Component5: [ "rejoice", "play", "stuff"],
+	Component6: [ "sneeze", "start", "protect"],
+	Component7: [ "Hopper", "succeed", "tug"],
+	Component8: [ "tug", "fence", "stuff"],
 	Component9: [ "fence", "clip", "syndicate"]
 };
 
@@ -56,7 +56,7 @@ function setup()
   createCanvas(1280,800);
 
   // replace all redacted words with the correct values from the data structures above
-  redactedText = "Dear +++++++++++++++++++, I am sure that something could be worked out in terms of ++++++++++ for your ++++++++. How does ++++++++ sound ? I am afraid I will need to be so crude as to spell out what ALGOL requires in return. ++++++ needs to be out of the picture. She’s caused enough trouble. Get the +++++++++ to organise the +++ but I’d prefer it you don’t mention me or +++++. I owe them enough favours already. Your old friend, ++++++";
+  redactedText = "Dear " + EvidenceA.Component3[0] + ", I am sure that something could be worked out in terms of " + EvidenceB.Component2[2] + " for your ++++++++. How does ++++++++ sound ? I am afraid I will need to be so crude as to spell out what ALGOL requires in return. ++++++ needs to be out of the picture. She’s caused enough trouble. Get the +++++++++ to organise the +++ but I’d prefer it you don’t mention me or +++++. I owe them enough favours already. Your old friend, ++++++";
 
 }
 
