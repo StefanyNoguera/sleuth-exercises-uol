@@ -85,7 +85,7 @@ function setup()
   createCanvas(1280, 800);
 
   // replace all redacted words with the correct values from the data structures above
-  redactedText = "My dearest " + evidenceB[1].detail1[3] + ", I have just received your very generous " + evidenceB[4].detail2[1] + " of " + evidenceB[3].detail0[0] + ". Thank you. This will be invaluable to our campaign. " + evidenceA[1].detail0[1] + " is a stalwart part of the community and I look forward to continuing our strong partnership in the future. Regard the other matter, I think you will find that all has been satisfactorily dealt with. Just read this morning’s front pages. You can rest assured that no mention was made of " + evidenceA[1].detail0[0] + " or " + evidenceB[4].detail2[0] + " to the " + evidenceA[0].detail0[3] + ". Your new " + evidenceA[1].detail1[2] + " at the " + evidenceA[0].detail2[0] + " can now proceed without impediment. Yours sincerely, +++++++++++++++++++";
+  redactedText = "My dearest " + evidenceB[1].detail1[3] + ", I have just received your very generous " + evidenceB[4].detail2[1] + " of " + evidenceB[3].detail0[0] + ". Thank you. This will be invaluable to our campaign. " + evidenceA[1].detail0[1] + " is a stalwart part of the community and I look forward to continuing our strong partnership in the future. Regard the other matter, I think you will find that all has been satisfactorily dealt with. Just read this morning’s front pages. You can rest assured that no mention was made of " + evidenceA[1].detail0[0] + " or " + evidenceB[4].detail2[0] + " to the " + evidenceA[0].detail0[3] + ". Your new " + evidenceA[1].detail1[2] + " at the " + evidenceA[0].detail2[0] + " can now proceed without impediment. Yours sincerely, " + evidenceB[4].detail0[1] + ".";
 
 }
 
