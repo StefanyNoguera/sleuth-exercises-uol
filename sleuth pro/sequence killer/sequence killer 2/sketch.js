@@ -76,15 +76,14 @@ function setup()
 
 	//add your code below here
   for (var i = 0; i < AbsconderLog.length; i++){
-    stroke(127, 255, 0);
+    stroke(154,205,50);
     triangle(AbsconderLog[i].locX - 5, AbsconderLog[i].locY + 5, AbsconderLog[i].locX, AbsconderLog[i].locY - 5, AbsconderLog[i].locX + 5, AbsconderLog[i].locY + 5);
   }
 
   for (var i = 0; i < IncidentData_coordinateX.length; i++){
-    fill(154, 205, 50);
+    fill(127,255,0);
     rect(IncidentData_coordinateX[i], IncidentData_coordinateY[i], 9, 9);
   }
-
 }
 
 //We are not using the draw function this time
