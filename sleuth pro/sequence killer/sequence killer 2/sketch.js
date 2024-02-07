@@ -80,6 +80,10 @@ function setup()
     triangle(AbsconderLog[i].locX - 5, AbsconderLog[i].locY + 5, AbsconderLog[i].locX, AbsconderLog[i].locY - 5, AbsconderLog[i].locX + 5, AbsconderLog[i].locY + 5);
   }
 
+  for (var i = 0; i < IncidentData_coordinateX.length; i++){
+    fill(154, 205, 50);
+    rect(IncidentData_coordinateX[i], IncidentData_coordinateY[i], 9, 9);
+  }
 
 }
 
