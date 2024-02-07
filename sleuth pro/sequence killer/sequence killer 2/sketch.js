@@ -31,7 +31,7 @@ var countyMap;
 
 //Sightings of Casey Fry.
 
-var AbsconderLog = [ 
+var AbsconderLog = [
   { locX : 639, locY : 288},
   { locX : 681, locY : 286},
   { locX : 712, locY : 293},
@@ -52,7 +52,7 @@ var AbsconderLog = [
   { locX : 654, locY : 523},
   { locX : 624, locY : 500},
   { locX : 594, locY : 484},
-  { locX : 555, locY : 474} 
+  { locX : 555, locY : 474}
 ];
 
 
@@ -75,7 +75,10 @@ function setup()
 	image(countyMap, 0,0);
 
 	//add your code below here
-
+  for (var i = 0; i < AbsconderLog.length; i++){
+    stroke(127, 255, 0);
+    triangle(AbsconderLog[i].locX - 5, AbsconderLog[i].locY + 5, AbsconderLog[i].locX, AbsconderLog[i].locY - 5, AbsconderLog[i].locX + 5, AbsconderLog[i].locY + 5);
+  }
 
 
 }
