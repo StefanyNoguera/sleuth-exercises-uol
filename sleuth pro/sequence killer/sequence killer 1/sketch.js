@@ -45,8 +45,9 @@ function setup()
 	image(countyMap, 0,0);
 
 	//add your code below here
-
-
+    for (var i = 0; i < fry_logbook_Location_X.length; i++){
+      fill(75, 0, 130);
+      rect(fry_logbook_Location_X[i], fry_logbook_Location_Y[i], 9, 9);
+    }
 }
-
 //We are not using the draw function this time
