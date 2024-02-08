@@ -101,6 +101,16 @@ function setup()
   for (let i = 0; i < Murderscene_Recorded.Loc_X.length; i++) {
     rect(Murderscene_Recorded.Loc_X[i], Murderscene_Recorded.Loc_Y[i], 10, 10);
   }
+
+  for (let i = 0; i < Casey_Sighted.length; i++) {
+    for (let j = 0; j < Murderscene_Recorded.Loc_X.length; j++) {
+      if (dist(Casey_Sighted[i].position_x, Casey_Sighted[i].position_y, Murderscene_Recorded.Loc_X[j], Murderscene_Recorded.Loc_Y[j]) < 48) {
+        possibleMatches.push({crime:{x: Murderscene_Recorded.Loc_X[j], y: Murderscene_Recorded.Loc_Y[j], victimName: Murderscene_Recorded.Fatality_[j]}, suspect:{x: Casey_Sighted[i].position_x, y: Casey_Sighted[i].position_y}});
+      }
+    }
+  }
+
+
 	// code to draw the matches ( if any)
 	for(let i = 0 ; i < possibleMatches.length ; i++)
 	{
