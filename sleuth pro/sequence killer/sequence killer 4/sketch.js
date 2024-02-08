@@ -88,6 +88,15 @@ function setup()
     triangle(attack_record_positionX[i] - 5, attack_record_positionY[i] + 5, attack_record_positionX[i] + 5, attack_record_positionY[i] + 5, attack_record_positionX[i], attack_record_positionY[i] - 5);
   }
 
+  // If she was within less than 70 pixels of any of the crimes within no more than 3 days of their occurrence then the details should be pushed to the list of possible matches with the following format.
+  for (let i = 0; i < attack_record_positionX.length; i++) {
+    for (let j = 0; j < caseyFry_record.loc_x.length; j++) {
+      if (dist(attack_record_positionX[i], attack_record_positionY[i], caseyFry_record.loc_x[j], caseyFry_record.loc_y[j]) < 70 && abs(attack_record_recordDate[i] - caseyFry_record.recordDate[j]) <= 3) {
+        possibleMatches.push({ crime: { x: attack_record_positionX[i], y: attack_record_positionY[i], victimName: attack_record_fatality[i] }, suspect: { x: caseyFry_record.loc_x[j], y: caseyFry_record.loc_y[j] } });
+      }
+    }
+  }
+
 
 	// code to draw the matches ( if any)
 	for(let i = 0 ; i < possibleMatches.length ; i++)
