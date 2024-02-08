@@ -26,12 +26,12 @@ commands:
 
 Witness statement:
 
-It was last Thursday, I heard noises outside so I looked out and saw a person in the steet. It's hard to say. They had shaved hair. They definately weigh less than 76 Kg. I would say they were shorter than 167 cm. I remember they had a chinese lettering tattoo. Their expression seemed menacing. It was very dark and I could barely see, I distinctly remember that they were wearing a red necktie, I remember thinking that was quite unusual. Can I go home now Sir? 
+It was last Thursday, I heard noises outside so I looked out and saw a person in the steet. It's hard to say. They had shaved hair. They definately weigh less than 76 Kg. I would say they were shorter than 167 cm. I remember they had a chinese lettering tattoo. Their expression seemed menacing. It was very dark and I could barely see, I distinctly remember that they were wearing a red necktie, I remember thinking that was quite unusual. Can I go home now Sir?
 
 */
 
 var lineupLog = [
-	{ 
+	{
 		"name": "HANG PEGORD",
 		"expression": "angry",
 		"item": "fur vest",
@@ -39,7 +39,7 @@ var lineupLog = [
 		"height": 190,
 		"weight": 78
 	},
-	{ 
+	{
 		"name": "NELSON JACQUELIN",
 		"expression": "empty",
 		"item": "dotted necktie",
@@ -47,7 +47,7 @@ var lineupLog = [
 		"height": 192,
 		"weight": 64
 	},
-	{ 
+	{
 		"name": "GAYLA SYMMES",
 		"expression": "menacing",
 		"item": "red necktie",
@@ -55,7 +55,7 @@ var lineupLog = [
 		"height": 160,
 		"weight": 73
 	},
-	{ 
+	{
 		"name": "DRUSILLA OORIN",
 		"expression": "blank",
 		"item": "pair of leather trousers",
@@ -63,7 +63,7 @@ var lineupLog = [
 		"height": 172,
 		"weight": 80
 	},
-	{ 
+	{
 		"name": "JAUNITA JENI",
 		"expression": "nerveous",
 		"item": "orange socks",
@@ -88,7 +88,13 @@ function setup()
 }
 
 // Declare your function here
-
+function matchSuspect(suspectObj){
+  if(suspectObj.hair === "shaved" && suspectObj.weight < 76 && suspectObj.height < 167 && suspectObj.item === "red necktie" && suspectObj.expression === "menacing"){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 function draw()
 {
