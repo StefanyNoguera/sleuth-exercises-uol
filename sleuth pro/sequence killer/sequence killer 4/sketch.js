@@ -81,8 +81,12 @@ function setup()
   }
   endShape();
 
-  
-
+  // Using another for loop to traverse the recent crime records, you should mark those locations on the map. Do this by drawing small, DarkBlue fill triangles centered over each location.
+  for (let i = 0; i < attack_record_positionX.length; i++) {
+    fill(0, 0, 139);
+    noStroke();
+    triangle(attack_record_positionX[i] - 5, attack_record_positionY[i] + 5, attack_record_positionX[i] + 5, attack_record_positionY[i] + 5, attack_record_positionX[i], attack_record_positionY[i] - 5);
+  }
 
 
 	// code to draw the matches ( if any)
