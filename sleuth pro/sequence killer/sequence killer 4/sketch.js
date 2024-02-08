@@ -73,7 +73,15 @@ function setup()
 	image(countyMap, 0,0);
 
 	//add your code below here
+  // use a for loop to traverse the sightings, marking all of the locations on the map where she was last seen. Do this by drawing MediumSlateBlue stroke vertexes at each location.
+  beginShape();
+  stroke(123, 104, 238);
+  for (let i = 0; i < caseyFry_record.loc_x.length; i++) {
+    vertex(caseyFry_record.loc_x[i], caseyFry_record.loc_y[i]);
+  }
+  endShape();
 
+  
 
 
 
