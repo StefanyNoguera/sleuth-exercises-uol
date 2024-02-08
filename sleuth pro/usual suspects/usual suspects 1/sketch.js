@@ -25,24 +25,24 @@ commands:
 
 Witness statement:
 
-It all started when I was exiting the store. That's when I noticed them. I'm not quite sure. They wore very thick glasses. Their expression seemed blank. They had shaved hair. It's so hard to remember right now. Can I go home now Sir? 
+It all started when I was exiting the store. That's when I noticed them. I'm not quite sure. They wore very thick glasses. Their expression seemed blank. They had shaved hair. It's so hard to remember right now. Can I go home now Sir?
 
 */
 
 var suspectList = [
-	{ 
+	{
 		"name": "JULIANA WILLMAR",
 		"expression": "blank",
 		"hair": "shaved",
 		"glasses": "very thick"
 	},
-	{ 
+	{
 		"name": "LESLEY FORSLIN",
 		"expression": "angry",
 		"hair": "thick black",
 		"glasses": "cheap plastic"
 	},
-	{ 
+	{
 		"name": "DARBY CASIMERE",
 		"expression": "confused",
 		"hair": "short black",
@@ -65,8 +65,13 @@ function setup()
 }
 
 // Declare your function here
-
-
+function matchSuspectProperties(suspectObj){
+  if(suspectObj.expression == "blank" && suspectObj.hair == "shaved" && suspectObj.glasses == "very thick"){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 function draw()
 {
