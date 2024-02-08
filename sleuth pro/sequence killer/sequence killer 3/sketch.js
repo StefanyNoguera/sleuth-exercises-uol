@@ -43,7 +43,7 @@ var possibleMatches = [];
 
 //Sightings of Casey Fry.
 
-var Casey_Sighted = [ 
+var Casey_Sighted = [
   { position_x : 639, position_y : 288},
   { position_x : 681, position_y : 286},
   { position_x : 712, position_y : 293},
@@ -64,7 +64,7 @@ var Casey_Sighted = [
   { position_x : 654, position_y : 523},
   { position_x : 624, position_y : 500},
   { position_x : 594, position_y : 484},
-  { position_x : 555, position_y : 474} 
+  { position_x : 555, position_y : 474}
 ];
 
 
@@ -89,8 +89,12 @@ function setup()
 	image(countyMap, 0,0);
 
 	//add your code below here
-
-
+  stroke(128, 128, 0);
+  beginShape();
+  for (let i = 0; i < Casey_Sighted.length; i++) {
+    vertex(Casey_Sighted[i].position_x, Casey_Sighted[i].position_y);
+  }
+  endShape();
 
 	// code to draw the matches ( if any)
 	for(let i = 0 ; i < possibleMatches.length ; i++)
