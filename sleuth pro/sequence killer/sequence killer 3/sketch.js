@@ -99,7 +99,7 @@ function setup()
   fill(139, 0, 0);
   noStroke();
   for (let i = 0; i < Murderscene_Recorded.Loc_X.length; i++) {
-    rect(Murderscene_Recorded.Loc_X[i], Murderscene_Recorded.Loc_Y[i], 10, 10);
+    rect(Murderscene_Recorded.Loc_X[i], Murderscene_Recorded.Loc_Y[i], 9, 9);
   }
 
   for (let i = 0; i < Casey_Sighted.length; i++) {
