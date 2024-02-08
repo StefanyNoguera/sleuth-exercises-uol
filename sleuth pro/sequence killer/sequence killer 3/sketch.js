@@ -96,6 +96,11 @@ function setup()
   }
   endShape();
 
+  fill(139, 0, 0);
+  noStroke();
+  for (let i = 0; i < Murderscene_Recorded.Loc_X.length; i++) {
+    rect(Murderscene_Recorded.Loc_X[i], Murderscene_Recorded.Loc_Y[i], 10, 10);
+  }
 	// code to draw the matches ( if any)
 	for(let i = 0 ; i < possibleMatches.length ; i++)
 	{
