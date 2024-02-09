@@ -117,7 +117,12 @@ function setup()
 }
 
 // Declare your function here
-
+function checkSuspectTraits(suspectObj){
+  let matchingProperties = 0;
+  if(suspectObj.expression === "angry"){
+    matchingProperties++;
+  }
+}
 
 
 function draw()
