@@ -134,6 +134,9 @@ function checkSuspectTraits(suspectObj){
   if(suspectObj.weight >= 62 && suspectObj.weight <= 100){
     matchingProperties++;
   }
+  if(suspectObj.hair === "long white"){
+    matchingProperties++;
+  }
 
 }
 
