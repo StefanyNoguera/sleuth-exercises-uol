@@ -137,7 +137,9 @@ function checkSuspectTraits(suspectObj){
   if(suspectObj.hair === "long white"){
     matchingProperties++;
   }
-
+  if(suspectObj.gender === "female"){
+    matchingProperties++;
+  }
 }
 
 
