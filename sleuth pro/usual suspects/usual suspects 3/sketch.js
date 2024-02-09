@@ -125,7 +125,9 @@ function checkSuspectTraits(suspectObj){
   if(suspectObj.age >= 30 && suspectObj.age <= 56){
     matchingProperties++;
   }
-
+  if(suspectObj.tattoo === "bull"){
+    matchingProperties++;
+  }
 }
 
 
