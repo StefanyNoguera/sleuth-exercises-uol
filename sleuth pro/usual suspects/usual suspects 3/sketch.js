@@ -128,6 +128,10 @@ function checkSuspectTraits(suspectObj){
   if(suspectObj.tattoo === "bull"){
     matchingProperties++;
   }
+  if(suspectObj.height >= 150 && suspectObj.height <= 185){
+    matchingProperties++;
+  }
+
 }
 
 
