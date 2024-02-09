@@ -131,6 +131,9 @@ function checkSuspectTraits(suspectObj){
   if(suspectObj.height >= 150 && suspectObj.height <= 185){
     matchingProperties++;
   }
+  if(suspectObj.weight >= 62 && suspectObj.weight <= 100){
+    matchingProperties++;
+  }
 
 }
 
