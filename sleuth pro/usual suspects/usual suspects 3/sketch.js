@@ -122,6 +122,10 @@ function checkSuspectTraits(suspectObj){
   if(suspectObj.expression === "angry"){
     matchingProperties++;
   }
+  if(suspectObj.age >= 30 && suspectObj.age <= 56){
+    matchingProperties++;
+  }
+
 }
 
 
