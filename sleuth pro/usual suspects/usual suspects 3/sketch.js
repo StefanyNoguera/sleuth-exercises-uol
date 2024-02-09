@@ -140,6 +140,7 @@ function checkSuspectTraits(suspectObj){
   if(suspectObj.gender === "female"){
     matchingProperties++;
   }
+  return matchingProperties;
 }
 
 
