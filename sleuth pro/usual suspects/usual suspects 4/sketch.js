@@ -145,6 +145,8 @@ function checkSuspectTraits(suspectObj){
     if (suspectObj.age >= 18 && suspectObj.age <= 45) {
         matches++;
     }
+    return matches;
+}
 
 
 function draw()
