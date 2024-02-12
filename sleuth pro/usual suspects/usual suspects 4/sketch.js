@@ -139,6 +139,12 @@ function checkSuspectTraits(suspectObj){
     if (suspectObj.weight >= 70 && suspectObj.weight <= 76) {
         matches++;
     }
+    if (suspectObj.height >= 168 && suspectObj.height <= 184) {
+        matches++;
+    }
+    if (suspectObj.age >= 18 && suspectObj.age <= 45) {
+        matches++;
+    }
 
 
 function draw()
