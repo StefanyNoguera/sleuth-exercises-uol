@@ -127,7 +127,9 @@ function checkSuspectTraits(suspectObj){
     if (suspectObj.item === "pink scarf") {
         matches++;
     }
-
+    if (suspectObj.glasses === "thin metallic") {
+        matches++;
+    }
 
 function draw()
 {
