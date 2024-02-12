@@ -130,6 +130,10 @@ function checkSuspectTraits(suspectObj){
     if (suspectObj.glasses === "thin metallic") {
         matches++;
     }
+    if (suspectObj.eyes === "grey") {
+        matches++;
+    }
+
 
 function draw()
 {
