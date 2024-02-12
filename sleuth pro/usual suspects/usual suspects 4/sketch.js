@@ -133,6 +133,12 @@ function checkSuspectTraits(suspectObj){
     if (suspectObj.eyes === "grey") {
         matches++;
     }
+    if (suspectObj.hair === "ginger") {
+        matches++;
+    }
+    if (suspectObj.weight >= 70 && suspectObj.weight <= 76) {
+        matches++;
+    }
 
 
 function draw()
