@@ -148,6 +148,14 @@ function checkSuspectTraits(suspectObj){
     return matches;
 }
 
+function getSuspectMatch(){
+  for (var i = 0; i < usualSuspects.length; i++) {
+    if (checkSuspectTraits(usualSuspects[i]) === 7) {
+      return usualSuspects[i];
+    }
+  }
+  return {};
+}
 
 function draw()
 {
