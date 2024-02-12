@@ -29,12 +29,12 @@ commands:
 
 Witness statement:
 
-It was last Thursday, I heard noises outside so I looked out and saw a person in the steet. I remember they had a big arrow tattoo. It's hard to say. I'll never forget their grey eyes. They were fairly tall, I think between a height of 168 and 184 cm. I distinctly remember that they were wearing a pink scarf, I remember thinking that was quite unusual. They wore thin metallic glasses. They brobably weigh between 70 and 76 kg. They had ginger hair. Their expression seemed menacing. It was very dark and I could barely see, They seemed to be between the age of 18 and 45 years old. It was very dark and I could barely see, That's all I can remember about them. 
+It was last Thursday, I heard noises outside so I looked out and saw a person in the steet. I remember they had a big arrow tattoo. It's hard to say. I'll never forget their grey eyes. They were fairly tall, I think between a height of 168 and 184 cm. I distinctly remember that they were wearing a pink scarf, I remember thinking that was quite unusual. They wore thin metallic glasses. They brobably weigh between 70 and 76 kg. They had ginger hair. Their expression seemed menacing. It was very dark and I could barely see, They seemed to be between the age of 18 and 45 years old. It was very dark and I could barely see, That's all I can remember about them.
 
 */
 
 var usualSuspects = [
-	{ 
+	{
 		"name": "BRIDGET NIEMELA",
 		"item": "fur vest",
 		"glasses": "very thick",
@@ -44,7 +44,7 @@ var usualSuspects = [
 		"height": 178,
 		"age": 44
 	},
-	{ 
+	{
 		"name": "JESUS CASIMERE",
 		"item": "orange socks",
 		"glasses": "white",
@@ -54,7 +54,7 @@ var usualSuspects = [
 		"height": 161,
 		"age": 58
 	},
-	{ 
+	{
 		"name": "DEEDEE DAVISWOOD",
 		"item": "pair of leather trousers",
 		"glasses": "red",
@@ -64,7 +64,7 @@ var usualSuspects = [
 		"height": 204,
 		"age": 49
 	},
-	{ 
+	{
 		"name": "JACQUELINE DURANTS",
 		"item": "net weave shirt",
 		"glasses": "blue",
@@ -74,7 +74,7 @@ var usualSuspects = [
 		"height": 194,
 		"age": 48
 	},
-	{ 
+	{
 		"name": "LINETTE TINTLE",
 		"item": "pink scarf",
 		"glasses": "thin metallic",
@@ -84,7 +84,7 @@ var usualSuspects = [
 		"height": 181,
 		"age": 19
 	},
-	{ 
+	{
 		"name": "DRUSILLA JOYER",
 		"item": "purple hat",
 		"glasses": "very thin",
@@ -94,7 +94,7 @@ var usualSuspects = [
 		"height": 175,
 		"age": 32
 	},
-	{ 
+	{
 		"name": "JAUNITA JACQUELIN",
 		"item": "dotted necktie",
 		"glasses": "dark brown",
@@ -122,6 +122,11 @@ function setup()
 
 // Declare both your functions here
 
+function checkSuspectTraits(suspectObj){
+    var matches = 0;
+    if (suspectObj.item === "pink scarf") {
+        matches++;
+    }
 
 
 function draw()
