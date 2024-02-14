@@ -33,8 +33,7 @@ function driveVehicle()
 	 - add a random amount between -0.05 and 0.05 to sleuthPI_car's vibrate_value property
 	 - use the constrain function to constrain sleuthPI_car's vibrate_value property to values between 0.04 and 1.07
 	 - call the runCar_motor function passing sleuthPI_car as an argument
-	*/
-
+  */
   sleuthPI_car.miles_driven += sleuthPI_car.speed_val;
   sleuthPI_car.vibrate_value += random(-0.05, 0.05);
   sleuthPI_car.vibrate_value = constrain(sleuthPI_car.vibrate_value, 0.04, 1.07);
@@ -51,6 +50,11 @@ function moveLanes(vehicle)
 	 - use LaneCoord_a and LaneCoord_b to effect the change.
 	 hint: You will need to modify the position_x property of vehicle.
 	*/
+  if (vehicle.position_x === LaneCoord_a) {
+    vehicle.position_x = LaneCoord_b;
+  } else {
+    vehicle.position_x = LaneCoord_a;
+  }
 }
 
 
