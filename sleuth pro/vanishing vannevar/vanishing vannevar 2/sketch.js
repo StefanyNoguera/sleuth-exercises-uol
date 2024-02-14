@@ -36,7 +36,7 @@ function driveVehicle()
 	*/
 
   sleuthPI_car.miles_driven += sleuthPI_car.speed_val;
-  
+  sleuthPI_car.vibrate_value += random(-0.05, 0.05);
 }
 
 
