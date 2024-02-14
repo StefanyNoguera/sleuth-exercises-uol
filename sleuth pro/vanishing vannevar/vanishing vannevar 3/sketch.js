@@ -68,7 +68,7 @@ function vehicleInfront( vehicle_a, vehicle_b )
 	 - do this by comparing the two cars' dist_driven properties
 	 - if these requirements are met then return the number_plate property for vehicle_b. Otherwise return false.
 	*/
-  if (vehicle_a.x === vehicle_b.x && vehicle_a.dist_driven < vehicle_b.dist_driven - 200) {
+  if (vehicle_a.x === vehicle_b.x && vehicle_a.dist_driven < vehicle_b.dist_driven && vehicle_b.dist_driven - vehicle_a.dist_driven < 200) {
     return vehicle_b.number_plate;
   }
   else {
