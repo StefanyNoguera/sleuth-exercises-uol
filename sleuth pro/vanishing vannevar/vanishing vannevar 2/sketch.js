@@ -28,19 +28,22 @@ carObject_array to understand their properties.
 function driveVehicle()
 {
 	/*
-	This function should do the following: 
-	 - increment sleuthPI_car's miles_driven property by its speed_val property 
+	This function should do the following:
+	 - increment sleuthPI_car's miles_driven property by its speed_val property
 	 - add a random amount between -0.05 and 0.05 to sleuthPI_car's vibrate_value property
 	 - use the constrain function to constrain sleuthPI_car's vibrate_value property to values between 0.04 and 1.07
 	 - call the runCar_motor function passing sleuthPI_car as an argument
 	*/
+
+  sleuthPI_car.miles_driven += sleuthPI_car.speed_val;
+  
 }
 
 
 function moveLanes(vehicle)
 {
 	/*
-	This function should do the following: 
+	This function should do the following:
 	 - move vehicle from one lane to the other.
 	 - do the move in a single step without any extra animation.
 	 - use LaneCoord_a and LaneCoord_b to effect the change.
@@ -52,7 +55,7 @@ function moveLanes(vehicle)
 function checkAhead( targetVehicle )
 {
 	/*
-	This function should do the following: 
+	This function should do the following:
 	 - determine if targetVehicle is in the same lane and less than 200px behind any of the cars in carObject_array.
 	 - do this by traversing carObject_array and comparing each car's miles_driven property to that of targetVehicle.
 	 - if you find a car that matches these requirements then return the number_plate property for the car. Otherwise return false.
@@ -71,7 +74,7 @@ var LaneCoord_b;
 var carImages = {};
 
 var carObject_array = [
-{ position_x: 300, position_y: 0, miles_driven: -200, car_variety: 'greenCar', number_plate: '0X3A5K', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 200, car_variety: 'redCar', number_plate: 'RBDWN4', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 600, car_variety: 'whiteCar', number_plate: 'TTZDNB', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 1000, car_variety: 'greenCar', number_plate: 'T7VCCE', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 1400, car_variety: 'whiteCar', number_plate: 'A57UIH', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 1800, car_variety: 'whiteCar', number_plate: 'PZ1SF2', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 2200, car_variety: 'whiteCar', number_plate: 'NCVOQ1', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 2600, car_variety: 'greenCar', number_plate: 'DG84JG', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 3000, car_variety: 'redCar', number_plate: 'O9OYYA', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 3400, car_variety: 'redCar', number_plate: 'I1LJL0', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 3800, car_variety: 'blueCar', number_plate: 'WEGKL6', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 4200, car_variety: 'greenCar', number_plate: 'O26MP9', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 4600, car_variety: 'redCar', number_plate: 'QYXCJD', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 5000, car_variety: 'blueCar', number_plate: 'HV64M3', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 5400, car_variety: 'blueCar', number_plate: 'AHOKZN', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 5800, car_variety: 'whiteCar', number_plate: 'Q9I4QH', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 6200, car_variety: 'redCar', number_plate: 'LJXB66', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 6600, car_variety: 'redCar', number_plate: '5CRDGD', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 7000, car_variety: 'redCar', number_plate: 'SM2BXB', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 7400, car_variety: 'redCar', number_plate: '70D2VV', speed_val: 2, exhaust: [  ]} 
+{ position_x: 300, position_y: 0, miles_driven: -200, car_variety: 'greenCar', number_plate: '0X3A5K', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 200, car_variety: 'redCar', number_plate: 'RBDWN4', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 600, car_variety: 'whiteCar', number_plate: 'TTZDNB', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 1000, car_variety: 'greenCar', number_plate: 'T7VCCE', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 1400, car_variety: 'whiteCar', number_plate: 'A57UIH', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 1800, car_variety: 'whiteCar', number_plate: 'PZ1SF2', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 2200, car_variety: 'whiteCar', number_plate: 'NCVOQ1', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 2600, car_variety: 'greenCar', number_plate: 'DG84JG', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 3000, car_variety: 'redCar', number_plate: 'O9OYYA', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 3400, car_variety: 'redCar', number_plate: 'I1LJL0', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 3800, car_variety: 'blueCar', number_plate: 'WEGKL6', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 4200, car_variety: 'greenCar', number_plate: 'O26MP9', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 4600, car_variety: 'redCar', number_plate: 'QYXCJD', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 5000, car_variety: 'blueCar', number_plate: 'HV64M3', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 5400, car_variety: 'blueCar', number_plate: 'AHOKZN', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 5800, car_variety: 'whiteCar', number_plate: 'Q9I4QH', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 6200, car_variety: 'redCar', number_plate: 'LJXB66', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 6600, car_variety: 'redCar', number_plate: '5CRDGD', speed_val: 2, exhaust: [  ]} , { position_x: 300, position_y: 0, miles_driven: 7000, car_variety: 'redCar', number_plate: 'SM2BXB', speed_val: 2, exhaust: [  ]} , { position_x: 500, position_y: 0, miles_driven: 7400, car_variety: 'redCar', number_plate: '70D2VV', speed_val: 2, exhaust: [  ]}
 ];
 
 
@@ -101,7 +104,7 @@ function setup()
 	LaneCoord_a = 300;
 	LaneCoord_b = 500;
 
-	sleuthPI_car = 
+	sleuthPI_car =
 	{
 		position_x: roadLeftEdge + roadWidth/4,
 		position_y: 550,
