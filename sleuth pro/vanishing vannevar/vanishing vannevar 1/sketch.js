@@ -35,6 +35,7 @@ function DriveVehicle()
 	*/
   sleuthCar.milesDriven += sleuthCar.accelVal;
   sleuthCar.engineShudderVal += random(-0.07, 0.07);
+  sleuthCar.engineShudderVal = constrain(sleuthCar.engineShudderVal, 0.03, 1.13);
 }
 
 
