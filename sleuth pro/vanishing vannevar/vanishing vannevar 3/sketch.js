@@ -84,6 +84,11 @@ function vehicleAtSide( target_car )
 	 - traverse vehicleObjects_list and determine if any of the cars are parallel with target_car.
 	 - if a car is found to be parallel to target_car then return that car object.
 	 - cars are considered parallel if the absolute difference between their dist_driven properties is less than 25 px and they have non-matching x properties	*/
+  for (var i = 0; i < vehicleObjects_list.length; i++) {
+    if (abs(vehicleObjects_list[i].dist_driven - target_car.dist_driven) < 25 && vehicleObjects_list[i].x !== target_car.x) {
+      return vehicleObjects_list[i];
+    }
+  }
 }
 
 
