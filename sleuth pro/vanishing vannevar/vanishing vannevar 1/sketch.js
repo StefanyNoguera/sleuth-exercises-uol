@@ -27,12 +27,14 @@ HINT: make sure you take a look at the initialisation of sleuthCar to understand
 function DriveVehicle()
 {
 	/*
-	This function should do the following: 
-	 - increment sleuthCar's milesDriven property by its accelVal property 
+	This function should do the following:
+	 - increment sleuthCar's milesDriven property by its accelVal property
 	 - add a random amount between -0.07 and 0.07 to sleuthCar's engineShudderVal property
 	 - use the constrain function to constrain sleuthCar's engineShudderVal property to values between 0.03 and 1.13
 	 - call the RunCar_motor function passing sleuthCar as an argument
 	*/
+  sleuthCar.milesDriven += sleuthCar.accelVal;
+
 }
 
 
@@ -54,7 +56,7 @@ function setup()
 {
 	createCanvas(800,800);
 
-	sleuthCar = 
+	sleuthCar =
 	{
 		x: roadLeftEdge + roadWidth/4,
 		y: 300,
