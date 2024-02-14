@@ -66,6 +66,12 @@ function checkAhead( targetVehicle )
 	 - do this by traversing carObject_array and comparing each car's miles_driven property to that of targetVehicle.
 	 - if you find a car that matches these requirements then return the number_plate property for the car. Otherwise return false.
 	*/
+  for (let i = 0; i < carObject_array.length; i++) {
+    if (carObject_array[i].position_x === targetVehicle.position_x && carObject_array[i].miles_driven > targetVehicle.miles_driven && carObject_array[i].miles_driven - targetVehicle.miles_driven < 200) {
+      return carObject_array[i].number_plate;
+    }
+  }
+  return false;
 }
 
 
