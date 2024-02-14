@@ -102,6 +102,15 @@ function identifySuspect()
 	 - if a match is found then the object of the car in question is returned.
 	 - otherwise return false.
 	*/
+  var car = vehicleAtSide(detective_carObject);
+  if (car) {
+    if (car.number_plate === "PCNUO3") {
+      return car;
+    }
+  }
+  else {
+    return false;
+  }
 }
 
 
