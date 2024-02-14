@@ -34,7 +34,7 @@ function DriveVehicle()
 	 - call the RunCar_motor function passing sleuthCar as an argument
 	*/
   sleuthCar.milesDriven += sleuthCar.accelVal;
-
+  sleuthCar.engineShudderVal += random(-0.07, 0.07);
 }
 
 
