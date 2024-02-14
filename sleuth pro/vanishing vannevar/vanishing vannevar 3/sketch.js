@@ -51,6 +51,12 @@ function moveLanes(target_vehicle)
 	 - use lane_pos_a and lane_pos_b to effect the change.
 	 hint: You will need to modify the x property of target_vehicle.
 	*/
+  if (target_vehicle.x === lane_pos_a) {
+    target_vehicle.x = lane_pos_b;
+  }
+  else {
+    target_vehicle.x = lane_pos_a;
+  }
 }
 
 
