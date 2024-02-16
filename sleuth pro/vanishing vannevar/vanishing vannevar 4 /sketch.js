@@ -88,6 +88,11 @@ function CheckVehicle_IsParallel( car_obj_a, car_obj_b )
 	 - determine if car_obj_a is parallel with car_obj_b.
 	 - if car_obj_a is found to be parallel to car_obj_b then return car_obj_b.
 	 - cars are considered parallel if the absolute difference between their kmsAmnt properties is less than 25 px and they have non-matching xPosition properties	*/
+  if (abs(car_obj_a.kmsAmnt - car_obj_b.kmsAmnt) < 25) {
+    if (car_obj_a.xPosition !== car_obj_b.xPosition) {
+      return car_obj_b;
+    }
+  }
 }
 
 
