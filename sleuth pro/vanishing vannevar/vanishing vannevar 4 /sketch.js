@@ -154,6 +154,10 @@ function Stop_Assailant(vehicle)
 	 - set the isApprehendingAssailant property of sleuthVehicleObject to true.
 	 - set the accelVal properties of both vehicles to zero.
 	*/
+  vehicle.isApprehended = true;
+  sleuthVehicleObject.isApprehendingAssailant = true;
+  vehicle.accelVal = 0;
+  sleuthVehicleObject.accelVal = 0;
 }
 
 
