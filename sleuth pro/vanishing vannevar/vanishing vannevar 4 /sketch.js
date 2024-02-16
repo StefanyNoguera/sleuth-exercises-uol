@@ -52,6 +52,12 @@ function Swap_Lanes(vehicle)
 	 - finally you should return vehicle at the end of the function.
 	 hint: You will need to modify the xPosition property of vehicle.
 	*/
+  if (vehicle.xPosition === lanePosition_a) {
+    vehicle.xPosition = lanePosition_b;
+  }
+  else {
+    vehicle.xPosition = lanePosition_a;
+  }
 }
 
 
