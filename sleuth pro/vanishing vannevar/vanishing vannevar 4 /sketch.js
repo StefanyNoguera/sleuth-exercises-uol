@@ -105,6 +105,15 @@ function Identify_Assailant()
 .	 - if a positive result is returned then the licencePlate property of the found car is then checked against the assailant description.
 	 - if a match is found then the car in question is assigned to the global variable assailant.
 	*/
+
+  for (var i = 0; i < cars_array.length; i++) {
+    var car = CheckVehicle_IsParallel(sleuthVehicleObject, cars_array[i]);
+    if (car) {
+      if (car.licencePlate === "UFVAMY") {
+        assailant = car;
+      }
+    }
+  }
 }
 
 
