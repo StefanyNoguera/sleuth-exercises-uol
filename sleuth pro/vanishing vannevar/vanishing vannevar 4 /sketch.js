@@ -38,6 +38,7 @@ function Move_Car()
   sleuthVehicleObject.kmsAmnt += sleuthVehicleObject.accelVal;
   sleuthVehicleObject.rumbleVal += random(-0.09, 0.09);
   sleuthVehicleObject.rumbleVal = constrain(sleuthVehicleObject.rumbleVal, 0.06, 1.09);
+  Cycle_CarMotor(sleuthVehicleObject);
 }
 
 
