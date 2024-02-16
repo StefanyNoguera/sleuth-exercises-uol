@@ -128,6 +128,21 @@ function Pursuing_Assailant()
 	 - if a positive result is returned it should check to see if the licencePlate property of that car matches that of assailant.
 	 - for a match, Stop_Assailant should be called, otherwise call Swap_Lanes.
 	*/
+  if (sleuthVehicleObject.followingAssailant) {
+    sleuthVehicleObject.accelVal *= 1.001;
+    sleuthVehicleObject.accelVal = min(sleuthVehicleObject.accelVal, 6);
+    for (var i = 0; i < cars_array.length; i++) {
+      var car = SearchVehicle_Infront(sleuthVehicleObject, cars_array[i]);
+      if (car) {
+        if (car.licencePlate === "UFVAMY") {
+          Stop_Assailant(car);
+        }
+        else {
+          Swap_Lanes(sleuthVehicleObject);
+        }
+      }
+    }
+  }
 }
 
 
