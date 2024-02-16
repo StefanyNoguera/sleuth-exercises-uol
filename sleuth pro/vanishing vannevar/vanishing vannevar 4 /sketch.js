@@ -29,19 +29,22 @@ cars_array to understand their properties.
 function Move_Car()
 {
 	/*
-	This function should do the following: 
-	 - increment sleuthVehicleObject's kmsAmnt property by its accelVal property 
+	This function should do the following:
+	 - increment sleuthVehicleObject's kmsAmnt property by its accelVal property
 	 - add a random amount between -0.09 and 0.09 to sleuthVehicleObject's rumbleVal property
 	 - use the constrain function to constrain sleuthVehicleObject's rumbleVal property to values between 0.06 and 1.09
 	 - call the Cycle_CarMotor function passing sleuthVehicleObject as an argument
 	*/
+  sleuthVehicleObject.kmsAmnt += sleuthVehicleObject.accelVal;
+  sleuthVehicleObject.rumbleVal += random(-0.09, 0.09);
+  sleuthVehicleObject.rumbleVal = constrain(sleuthVehicleObject.rumbleVal, 0.06, 1.09);
 }
 
 
 function Swap_Lanes(vehicle)
 {
 	/*
-	This function should do the following: 
+	This function should do the following:
 	 - move vehicle from one lane to the other.
 	 - do the move in a single step without any extra animation.
 	 - use lanePosition_a and lanePosition_b to effect the change.
@@ -54,7 +57,7 @@ function Swap_Lanes(vehicle)
 function SearchVehicle_Infront( target_car_a, target_car_b )
 {
 	/*
-	This function should do the following: 
+	This function should do the following:
 	 - determine if target_car_a is in the same lane and less than 200px behind target_car_b.
 	 - do this by comparing the two cars' kmsAmnt properties
 	 - if these requirements are met then return true. Otherwise return false.
@@ -65,7 +68,7 @@ function SearchVehicle_Infront( target_car_a, target_car_b )
 function CheckVehicle_IsParallel( car_obj_a, car_obj_b )
 {
 	/*
-	This function should do the following: 
+	This function should do the following:
 	 - determine if car_obj_a is parallel with car_obj_b.
 	 - if car_obj_a is found to be parallel to car_obj_b then return car_obj_b.
 	 - cars are considered parallel if the absolute difference between their kmsAmnt properties is less than 25 px and they have non-matching xPosition properties	*/
@@ -75,7 +78,7 @@ function CheckVehicle_IsParallel( car_obj_a, car_obj_b )
 function Identify_Assailant()
 {
 	/*
-	This function should do the following: 
+	This function should do the following:
 	 - Check cars passing parallel to sleuthVehicleObject to see if they match the licencePlate property in the assailant description.
 	 - it does this by traversing cars_array and calling CheckVehicle_IsParallel for each car
 .	 - if a positive result is returned then the licencePlate property of the found car is then checked against the assailant description.
@@ -87,7 +90,7 @@ function Identify_Assailant()
 function Pursuing_Assailant()
 {
 	/*
-	This function should do the following: 
+	This function should do the following:
 	 - only operate if the followingAssailant property of sleuthVehicleObject is true.
 	 - scale the accelVal property of sleuthVehicleObject by a factor of 1.001.
 	 - use the min function to make sure that sleuthVehicleObject's accelVal property does not exceed 6.
@@ -101,7 +104,7 @@ function Pursuing_Assailant()
 function Stop_Assailant(vehicle)
 {
 	/*
-	This function should do the following: 
+	This function should do the following:
 	 - set the isApprehended property of vehicle to true.
 	 - set the isApprehendingAssailant property of sleuthVehicleObject to true.
 	 - set the accelVal properties of both vehicles to zero.
@@ -121,7 +124,7 @@ var carImages = {};
 var assailant;
 
 var cars_array = [
-{ xPosition: 300, yPosition: 0, kmsAmnt: -200, carModel: 'greenCar', licencePlate: 'FIYHPB', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 200, carModel: 'blueCar', licencePlate: 'LZQELD', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 600, carModel: 'blueCar', licencePlate: 'C3IGJI', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 1000, carModel: 'greenCar', licencePlate: 'AYN9WJ', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 1400, carModel: 'whiteCar', licencePlate: 'YBRDAA', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 1800, carModel: 'blueCar', licencePlate: '22SKLD', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 2200, carModel: 'blueCar', licencePlate: 'VEWQE0', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 2600, carModel: 'blueCar', licencePlate: 'SFEV4L', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 3000, carModel: 'greenCar', licencePlate: 'UFVAMY', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 3400, carModel: 'blueCar', licencePlate: '11OED0', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 3800, carModel: 'blueCar', licencePlate: 'HENT00', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 4200, carModel: 'whiteCar', licencePlate: 'YHQJUX', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 4600, carModel: 'whiteCar', licencePlate: '45TBG5', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 5000, carModel: 'whiteCar', licencePlate: 'SN6DAE', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 5400, carModel: 'greenCar', licencePlate: 'C3YP15', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 5800, carModel: 'whiteCar', licencePlate: 'YYRM4V', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 6200, carModel: 'redCar', licencePlate: 'K97I2X', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 6600, carModel: 'redCar', licencePlate: '4URK7W', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 7000, carModel: 'blueCar', licencePlate: '6ZL5BH', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 7400, carModel: 'whiteCar', licencePlate: 'M7ERMX', accelVal: 2, exhaust: [  ]} 
+{ xPosition: 300, yPosition: 0, kmsAmnt: -200, carModel: 'greenCar', licencePlate: 'FIYHPB', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 200, carModel: 'blueCar', licencePlate: 'LZQELD', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 600, carModel: 'blueCar', licencePlate: 'C3IGJI', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 1000, carModel: 'greenCar', licencePlate: 'AYN9WJ', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 1400, carModel: 'whiteCar', licencePlate: 'YBRDAA', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 1800, carModel: 'blueCar', licencePlate: '22SKLD', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 2200, carModel: 'blueCar', licencePlate: 'VEWQE0', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 2600, carModel: 'blueCar', licencePlate: 'SFEV4L', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 3000, carModel: 'greenCar', licencePlate: 'UFVAMY', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 3400, carModel: 'blueCar', licencePlate: '11OED0', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 3800, carModel: 'blueCar', licencePlate: 'HENT00', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 4200, carModel: 'whiteCar', licencePlate: 'YHQJUX', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 4600, carModel: 'whiteCar', licencePlate: '45TBG5', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 5000, carModel: 'whiteCar', licencePlate: 'SN6DAE', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 5400, carModel: 'greenCar', licencePlate: 'C3YP15', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 5800, carModel: 'whiteCar', licencePlate: 'YYRM4V', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 6200, carModel: 'redCar', licencePlate: 'K97I2X', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 6600, carModel: 'redCar', licencePlate: '4URK7W', accelVal: 2, exhaust: [  ]} , { xPosition: 500, yPosition: 0, kmsAmnt: 7000, carModel: 'blueCar', licencePlate: '6ZL5BH', accelVal: 2, exhaust: [  ]} , { xPosition: 300, yPosition: 0, kmsAmnt: 7400, carModel: 'whiteCar', licencePlate: 'M7ERMX', accelVal: 2, exhaust: [  ]}
 ];
 
 
@@ -154,7 +157,7 @@ function setup()
 	lanePosition_a = 300;
 	lanePosition_b = 500;
 
-	sleuthVehicleObject = 
+	sleuthVehicleObject =
 	{
 		xPosition: roadLeftEdge + roadWidth/4,
 		yPosition: 550,
