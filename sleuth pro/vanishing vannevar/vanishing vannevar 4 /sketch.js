@@ -70,6 +70,14 @@ function SearchVehicle_Infront( target_car_a, target_car_b )
 	 - do this by comparing the two cars' kmsAmnt properties
 	 - if these requirements are met then return true. Otherwise return false.
 	*/
+  if (target_car_a.xPosition === target_car_b.xPosition) {
+    if (target_car_a.kmsAmnt < target_car_b.kmsAmnt) {
+      if (target_car_b.kmsAmnt - target_car_a.kmsAmnt < 200) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 
