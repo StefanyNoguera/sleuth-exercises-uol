@@ -58,6 +58,7 @@ function Swap_Lanes(vehicle)
   else {
     vehicle.xPosition = lanePosition_a;
   }
+  return vehicle;
 }
 
 
