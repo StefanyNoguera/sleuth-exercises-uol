@@ -7,8 +7,8 @@ CaseNum: 801-2-97310094-4098078
 
 La Traviata is rolling into town and we’ll be there to nab a shot for our files of the Order of Ritchie. The informant is starting to feel the heat but was able to scribble down which seat they are sitting in ordered by row in the array, suspects. Each element is a seat on one row of the stalls going from row 1 to 10. Ritchie’s all have retro glasses so that might be helpful in your task.  Anyway you’ll have to untangle the array.
 
-- Set the spotlights to shine on the members of the order. 
-- Do this by setting the captured  property of the element in stalls to true. 
+- Set the spotlights to shine on the members of the order.
+- Do this by setting the captured  property of the element in stalls to true.
 - You must use a single for loop to pick out the members of the order
 
 Solve the case using only:
@@ -36,8 +36,10 @@ function draw()
 {
 	image(crowdImg, 0, 0);
 	////////////YOUR CODE GOES HERE////////////////////////
-
-
+  for (var i = 0; i < suspects.length; i++)
+  {
+    stalls[i][suspects[i]].captured = true;
+  }
 
 	///////////DON'T CHANGE ANY CODE BELOW HERE////////////
 	blendMode(BLEND);
