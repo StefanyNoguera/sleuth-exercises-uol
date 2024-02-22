@@ -5,14 +5,14 @@ Stage 1: Rigoletto
 Officer: 4098078
 CaseNum: 801-0-39219342-4098078
 
-At the rotten core of Console City are a series of secretive orders who pull all the criminal strings. If we get to them we can clean up this town for good. 
+At the rotten core of Console City are a series of secretive orders who pull all the criminal strings. If we get to them we can clean up this town for good.
 
-Now we have a chance - the Order of The Knuth's will be at the command performance of Rigoletto at the console city Opera house tonight. Our person on the inside is working the box office. We’ve got intell and access to the lighting desk. 
+Now we have a chance - the Order of The Knuth's will be at the command performance of Rigoletto at the console city Opera house tonight. Our person on the inside is working the box office. We’ve got intell and access to the lighting desk.
 
-- Set the spotlights to shine on the members of the order. 
-- Do this by setting the selected  property of the element in operaBuffs to true. 
+- Set the spotlights to shine on the members of the order.
+- Do this by setting the selected  property of the element in operaBuffs to true.
 - We know that one member of the order is seated in the 3rd row, 5th seat
-- But you can identify the other 7 members of the order by their trademark scarf. 
+- But you can identify the other 7 members of the order by their trademark scarf.
 
 There are many ways to complete the case but you should only use operaBuffs[#][#] to update the property.
 
@@ -38,9 +38,17 @@ function draw()
 {
 	image(crowdImg, 0, 0);
 	////////////YOUR CODE GOES HERE////////////////////////
+//   Now we have a chance - the Order of The Knuth's will be at the command performance of Rigoletto at the console city Opera house tonight. Our person on the inside is working the box office. We’ve got intell and access to the lighting desk.
 
+// - Set the spotlights to shine on the members of the order.
+// - Do this by setting the selected  property of the element in operaBuffs to true.
+// - We know that one member of the order is seated in the 3rd row, 5th seat
+// - But you can identify the other 7 members of the order by their trademark scarf.
 
+// There are many ways to complete the case but you should only use operaBuffs[#][#] to update the property.
 
+  operaBuffs[2][4].selected = true;
+  
 	///////////DON'T CHANGE ANY CODE BELOW HERE////////////
 	blendMode(BLEND);
 	background(80);
