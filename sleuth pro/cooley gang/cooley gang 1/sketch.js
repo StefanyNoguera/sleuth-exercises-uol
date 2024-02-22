@@ -48,7 +48,8 @@ function draw()
 // There are many ways to complete the case but you should only use operaBuffs[#][#] to update the property.
 
   operaBuffs[2][4].selected = true;
-  
+  operaBuffs[2][3].selected = true;
+
 	///////////DON'T CHANGE ANY CODE BELOW HERE////////////
 	blendMode(BLEND);
 	background(80);
