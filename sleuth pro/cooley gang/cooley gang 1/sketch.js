@@ -50,7 +50,8 @@ function draw()
   operaBuffs[2][4].selected = true;
   operaBuffs[2][3].selected = true;
   operaBuffs[0][6].selected = true;
-
+  operaBuffs[6][7].selected = true;
+  operaBuffs[7][4].selected = true;
 
 
 	///////////DON'T CHANGE ANY CODE BELOW HERE////////////
