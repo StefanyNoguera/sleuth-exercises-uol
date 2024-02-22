@@ -53,6 +53,7 @@ function draw()
   operaBuffs[6][7].selected = true;
   operaBuffs[7][4].selected = true;
   operaBuffs[8][5].selected = true;
+  operaBuffs[8][6].selected = true;
 
 
 	///////////DON'T CHANGE ANY CODE BELOW HERE////////////
