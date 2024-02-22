@@ -44,7 +44,6 @@ function draw()
 // - Do this by setting the selected  property of the element in operaBuffs to true.
 // - We know that one member of the order is seated in the 3rd row, 5th seat
 // - But you can identify the other 7 members of the order by their trademark scarf.
-
 // There are many ways to complete the case but you should only use operaBuffs[#][#] to update the property.
 
   operaBuffs[2][4].selected = true;
