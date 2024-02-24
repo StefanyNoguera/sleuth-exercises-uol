@@ -9,8 +9,8 @@ We have a chance to record the powerful Order of Tukey before the curtain comes 
 
 Our guy on the inside has only been able to provide us with the ticket stubs. They are stored in suspect moving through the rows in order from left to right. Ticket stubbs are marked with true if they are in the gang. It’ll be tough but I’m sure you are up to it kid!
 
-- Set the spotlights to shine on the members of the order. 
-- Do this by setting the caught  property of the element in viewers to true. 
+- Set the spotlights to shine on the members of the order.
+- Do this by setting the caught  property of the element in viewers to true.
 - You must use a nested for loop to pick out the members of the order
 
 
@@ -40,9 +40,16 @@ function draw()
 {
 	image(crowdImg, 0, 0);
 	////////////YOUR CODE GOES HERE////////////////////////
-
-
-
+    for (var i = 0; i < viewers.length; i++)
+    {
+        for (var j = 0; j < viewers[i].length; j++)
+        {
+            if (suspect[i * viewers[i].length + j])
+            {
+                viewers[i][j].caught = true;
+            }
+        }
+    }
 	///////////DON'T CHANGE ANY CODE BELOW HERE////////////
 	blendMode(BLEND);
 	background(80);
