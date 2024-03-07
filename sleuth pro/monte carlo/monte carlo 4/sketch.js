@@ -16,10 +16,10 @@ Now, the card you are looking for is stored in the cut_location object. You need
 
 - Write a function called deckCut and call it from setup.
 - This should search for card matching cut_location inside playingCards.
-- Once you've found a match use the JavaScript splice() function to store the cut card and all the elements after from the playingCards array in the deck_upto_cut array. 
+- Once you've found a match use the JavaScript splice() function to store the cut card and all the elements after from the playingCards array in the deck_upto_cut array.
 - You'll need to break the loop once you've done as you don't want to keep searching.
-- Finally reverse the elements in deck_upto_cut so that the card we cut the deck at is the last element and not the first. 
-	- Unfortunately, if we use JavaScript's inbuilt reverse() function we’ll be spotted. You’ll have to write this yourself kid. 
+- Finally reverse the elements in deck_upto_cut so that the card we cut the deck at is the last element and not the first.
+	- Unfortunately, if we use JavaScript's inbuilt reverse() function we’ll be spotted. You’ll have to write this yourself kid.
 
 
 */
@@ -44,15 +44,41 @@ function setup()
 
 
 	//call your shuffleSeed() function here. Followed by a call to shuffleDeck with the return value of shuffleSeed() as an argument.
-
+  shuffleDeck(shuffleSeed());
 	//call your deckCut function here
-
+  deckCut();
 }
 
 //write your deckCut function here
+function deckCut() {
+  var deck_upto_cut = [];
+  for (var i = 0; i < playingCards.length; i++) {
+    if (playingCards[i].card_suit == cut_location.s && playingCards[i].no == cut_location.number) {
+      deck_upto_cut.push(playingCards[i]);
+      for (var j = i + 1; j < playingCards.length; j++) {
+        deck_upto_cut.push(playingCards[j]);
+      }
+      break;
+    }
+  }
+
+  // Manual reversal without using the reverse function
+  var reversedDeck = [];
+  for (var k = deck_upto_cut.length - 1; k >= 0; k--) {
+    reversedDeck.push(deck_upto_cut[k]);
+  }
+
+  deck_upto_cut = reversedDeck;
+}
 
 //write your shuffleSeed() function here.
-
+function shuffleSeed() {
+  var seed = [];
+  for (var i = 0; i < 52; i++) {
+    seed.push(round(random(9, 54)));
+  }
+  return seed;
+}
 /////////////////////DON'T CHANGE ANYTHING BELOW HERE/////////////////////////
 function shuffleDeck(shuffleSeed)
 {
