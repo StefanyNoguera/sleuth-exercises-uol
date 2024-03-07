@@ -13,7 +13,7 @@ These sharks don’t mess about. One hand, winner takes all. What kind of chief 
 - Matching cards should be added to the hand array
 - You'll need to use a nested for loop and break statement in the inner loop to stop searching once you've found a match.
 
-- You also need to write a shuffleSeed() function. 
+- You also need to write a shuffleSeed() function.
 - This needs to return an array of 52 random integers between 10 and 83.
 - Make sure you use the push method to add values to your array and the round function to convert your random values to integers.
 - Call shuffleSeed in setup and use the return value as the argument for shuffleDeck().
@@ -41,15 +41,36 @@ function setup()
 
 
 	//call your shuffleSeed() function here. Followed by a call to shuffleDeck with the return value of shuffleSeed() as an argument.
-
+  shuffleDeck(shuffleSeed());
 	//call your winning_hand_set function here
-
+  winning_hand_set();
 }
 
 //write your winning_hand_set function here
-
+function winning_hand_set()
+{
+    for (var i = 0; i < handToWin.length; i++)
+    {
+        for (var j = 0; j < playing_cards.length; j++)
+        {
+            if (handToWin[i].cardSuit == playing_cards[j].type && handToWin[i].n == playing_cards[j].value)
+            {
+                hand.push(playing_cards[j]);
+                break;
+            }
+        }
+    }
+}
 //write your shuffleSeed() function here.
-
+function shuffleSeed()
+{
+    var seed = [];
+    for (var i = 0; i < 52; i++)
+    {
+        seed.push(round(random(10, 83)));
+    }
+    return seed;
+}
 /////////////////////DON'T CHANGE ANYTHING BELOW HERE/////////////////////////
 function shuffleDeck(shuffleSeed)
 {
