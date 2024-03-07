@@ -12,7 +12,7 @@ You aren’t going to look like much of a Poker player unless you can do a good 
 - Declare an empty array in the function.
 - Using a for loop, fill the array with 52 random integers between 10 and 73.
 - Make sure you use the push method to add values to your array and the round function to convert your random values to integers.
-- At the end of the function, return the array 
+- At the end of the function, return the array
 - Call shuffle_seed in setup.
 - Call Shuffle deck using the return value from shuffle_seed as the argument.
 
@@ -35,11 +35,20 @@ function setup()
 
 
 	//call your shuffle_seed function here. Followed by a call to shuffleDeck with the return value of shuffle_seed as an argument.
-
+  var seed = shuffle_seed();
+  shuffleDeck(seed);
 }
 
 //write your shuffle_seed function here
-
+function shuffle_seed()
+{
+  var seed = [];
+  for (var i = 0; i < 52; i++)
+  {
+    seed.push(round(random(10, 73)));
+  }
+  return seed;
+}
 
 /////////////////////DON'T CHANGE ANYTHING BELOW HERE/////////////////////////
 function shuffleDeck(shuffleSeed)
