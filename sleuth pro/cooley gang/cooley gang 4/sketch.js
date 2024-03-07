@@ -51,7 +51,7 @@ function draw()
         }
     }
 	///////////DON'T CHANGE ANY CODE BELOW HERE////////////
-	blendMode(BLEND);
+	blendMode(BLEND); 
 	background(80);
 	highlight();
 	blendMode(DARKEST);
