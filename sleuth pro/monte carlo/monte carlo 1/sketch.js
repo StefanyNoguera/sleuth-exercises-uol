@@ -30,13 +30,21 @@ function setup()
 	createCanvas(table_img.width, table_img.height);
 	frameRate(30);
 
-
 	//call your cardPicker function here
-
+  cardPicker();
 }
 
 //write your cardPicker function here
-
+function cardPicker()
+{
+  for (var i = 0; i < playingCards.length; i++)
+  {
+    if (playingCards[i].suit == "Clubs" || playingCards[i].value == "10")
+    {
+      playingCards[i].marked = true;
+    }
+  }
+}
 
 function draw()
 {
